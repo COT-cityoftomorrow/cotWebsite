@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="stylesheet" href="../CSS/Navigation Bar.css" <!-- Button to open the modal login form -->
 <ul>
   <li><a href="/index.html">Home</a></li>
@@ -20,10 +21,9 @@
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label><br>
     <button id="btnlogin" type="submit">Login</button>
+    <span id="pswforgotten" class="psw"><a href="passwortvergessen.html" style="text-decoration: none; color: white;" >Passwort vergessen?</a></span>
   </form>
-  <div class="container" id="btnforgot">
-    <span class="psw"><a href="passwortvergessen.html" style="text-decoration: none; color: white;" >Passwort vergessen?</a></span>
-  </div>
+ 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200&display=swap');
 
@@ -40,7 +40,7 @@
   border-radius: 16px;
 }
 
-span {
+#pswforgotten {
   background-color: #04AA6D;
   border: none;
   padding: 10px 50px;
@@ -49,8 +49,7 @@ span {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px;
-  margin-left: 560px;
-  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
     body {
