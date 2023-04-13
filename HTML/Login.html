@@ -8,25 +8,25 @@
 </ul>
 <div id="id01" class="modal">
   <br><br>
-  <div class="container" style='display: flex; width: 100%; flex-direction: column; justify-content: center; row-gap: 10px; align-items: center; text-align: center;'>
-    <img style="width: 100px; border-radius: 100%;" src="../Fotos/user.png" alt="User_PNG"><br><br>
-    <form class="modal-content animate" action="/action_page.php">
-      <label for="uname"><b>Username</b></label><br><br>
-      <input class="eingabefeld" type="text" placeholder="Enter Username" name="uname" required>
-      <br><br><br>
-      <label for="psw"><b>Password</b></label><br><br>
-      <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" required>
-      <button id="btnlogin" type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </form>
-  </div>
+  <img style="width: 100px; border-radius: 100%;" src="../Fotos/user.png" alt="User_PNG"><br><br>
+  <form class="modal-content animate" action="/action_page.php"
+    style='display: flex; width: 100%; flex-direction: column; justify-content: center; row-gap: 10px; align-items: center; text-align: center;'>
+    <label for="uname"><b>Username</b></label><br><br>
+    <input class="eingabefeld" type="text" placeholder="Enter Username" name="uname" required>
+    <br><br><br>
+    <label for="psw"><b>Password</b></label><br><br>
+    <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" required>
+    <button id="btnlogin" type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </form>
   <div class="container" style="background-color:#f1f1f1">
     <span class="psw"><a href="passwortvergessen.html">Passwort vergessen?</a></span>
   </div>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200&display=swap');
+
     #btnlogin {
       border-radius: 15%;
       height: auto;
@@ -35,8 +35,9 @@
       color: white;
       width: auto;
       background-color: green;
-      border: 1px solid black; 
+      border: 1px solid black;
     }
+
     body {
       font-family: 'Ubuntu', sans-serif;
       margin: 0;
@@ -44,12 +45,14 @@
       height: 100%;
       border-width: 0;
     }
+
     html {
       margin: 0;
       width: 100%;
       height: 100%;
       border-width: 0;
     }
+
     .eingabefeld {
       align-self: Center;
       padding: 10px;
