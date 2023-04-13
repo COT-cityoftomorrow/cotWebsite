@@ -16,7 +16,7 @@
       <br><br><br>
       <label for="psw"><b>Password</b></label><br><br>
       <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" required>
-      <button type="submit">Login</button>
+      <button id="btnlogin" type="submit">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -27,6 +27,16 @@
   </div>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200&display=swap');
+    #btnlogin {
+      border-radius: 15%;
+      height: auto;
+      padding: 10px;
+      font-size: 20px;
+      color: white;
+      width: auto;
+      background-color: green;
+      border: 1px solid black; 
+    }
     body {
       font-family: 'Ubuntu', sans-serif;
       margin: 0;
