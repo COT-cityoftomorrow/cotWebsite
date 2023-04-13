@@ -2,7 +2,6 @@
 <link rel="stylesheet" href="../CSS/Navigation Bar.css" <!-- Button to open the modal login form -->
 <ul>
   <li><a href="../index.html">Home</a></li>
-  <li><a href="#news">News</a></li>
   <li><a href="Register.html">Regristrieren</a></li>
   <li><a href="#contact">Kontakt</a></li>
   <li style="float:right"><a class="active" href="#about">Über Uns</a></li>
@@ -22,6 +21,7 @@
     </label><br>
     <button id="btnlogin" type="submit">Login</button>
     <span id="pswforgotten" class="psw"><a href="passwortvergessen.html" style="text-decoration: none; color: white;" >Passwort vergessen?</a></span>
+    <span id="Regristrierung" class="psw"><a href="Register.html" style="text-decoration: none; color: white;" >Kein Konto, regristrieren sie sich jetzt!</a></span>
   </form>
  
   <style>
@@ -49,8 +49,21 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
+
+#Regristrierung {
+  background-color: #04AA6D;
+  border: none;
+  padding: 10px 50px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-top: -45px;
+}
+
 
     body {
       font-family: 'Ubuntu', sans-serif;
