@@ -1,2 +1,0 @@
-# cotWebsite
-Unser JugendHackt Project
