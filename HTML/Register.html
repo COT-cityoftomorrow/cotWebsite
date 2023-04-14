@@ -158,6 +158,9 @@
             }),
             success: (data) => {
               console.log(data);
+            },
+            error: (error) => {
+              alert(error.responseJSON.error);
             }
           })
         } else {
