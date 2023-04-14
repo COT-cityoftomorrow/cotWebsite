@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-
 a{
     text-decoration: none;
 }
@@ -40,7 +39,7 @@ a{
 .container .newsletter-btn:hover{
     background: #282828;
 }
-.container .newsletter-btn.active{
+.container .newsletter-btn.active .body:after{
     display: none;
 }
 .container .newsletter{
@@ -58,7 +57,7 @@ a{
 }
 
 .newsletter .newsletter-icon{
-    background: #ff801e;
+    background: #04AA6D;
     display: inline-block;
     padding: 12px 15px;
     border-radius: 50%;
