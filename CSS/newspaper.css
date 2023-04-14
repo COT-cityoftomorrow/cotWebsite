@@ -1,3 +1,4 @@
+
 @import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
 
 *{
@@ -6,15 +7,7 @@
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #ff801e60;
-    font-family: 'Ubuntu', sans-serif;
-}
+
 a{
     text-decoration: none;
 }
@@ -29,13 +22,16 @@ a{
 
 .container .newsletter-btn{
     display: block;
-    background: #ff801e;
+    background: #333;
     color: #fff;
     align-items: center;
     padding: 14px 32px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 12px;
+    margin-right: 640px;
+    margin-top: -49px;
+    
 }
 .container .newsletter-btn:hover{
     background: #282828;
