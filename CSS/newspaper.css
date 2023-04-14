@@ -20,7 +20,7 @@ a{
     width: 520px;
 }
 
-.container .newsletter-btn{
+/*.container .newsletter-btn{
     display: block;
     background: #333;
     color: #fff;
@@ -31,7 +31,7 @@ a{
     margin-right: 640px;
     margin-top: -49px;
     
-}
+}*/
 .container .newsletter-btn:hover{
     background: #282828;
 }
