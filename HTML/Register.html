@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/CSS/Navigation Bar.css">
+<link rel="stylesheet" href="../CSS/Navigation Bar.css">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
@@ -140,5 +140,37 @@
       </a>
     </div>
   </div>
-
+  <script>
+    $(document).ready(() => {
+      $("#registerbtn").on("click", () => {
+        if ($("#psw").val() == $("#psw-repeat").val()) {
+          $.ajax({
+            method: "POST",
+            url: "http://localhost:3000/createUser",
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify({
+              email: $("#email").val(),
+              password: $("#psw").val(),
+              name: $("#username").val(),
+              adressStreet: $("#adress").val(),
+              adressPlace: $("#Postleitzahl").val()
+            }),
+            success: (data) => {
+              //$.cookie("token", data.token)
+              //$(document).attr("location", "../index.html");
+              console.log(data);
+              localStorage.setItem("token", data.token);
+            },
+            error: (error) => {
+              alert(error.responseJSON.error);
+            }
+          })
+        } else {
+          alert("Deine Passwörter stimmen nicht überein!");
+        }
+      })
+    })
+  </script>
 </form>
+
