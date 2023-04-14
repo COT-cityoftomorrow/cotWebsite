@@ -1,14 +1,8 @@
-<link rel="stylesheet" href="/CSS/Navigation Bar.css">
+<link rel="stylesheet" href="../CSS/Navigation Bar.css">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<script src="../JavaScript/jquery-3.6.4.min.js"></script>
-<script src="../JavaScript/jquery.cookie.js"></script>
 
-<title>AaseeCoin</title>
 
-<<<<<<< HEAD
 <title>Registrieren</title>
-=======
->>>>>>> 622255e233aa737f8da245da57af35b2cd579f55
 <ul>
   <li><a href="Login.html">Anmelden</a></li>
   <li><a href="Contact.html">Kontakt</a></li>
@@ -32,7 +26,7 @@
     width: 100%;
     height: 100%;
     border-width: 0;
-
+    
   }
 
   /* Add padding to containers */
@@ -105,11 +99,18 @@
   }
 </style>
 
-<form>
+<form action="action_page.php">
   <div class="container">
     <h1>Regristrieren</h1>
     <p>Bitte füllen sie alle Felder aus.</p>
     <hr>
+    <label for="adress"><b>Adresse und Hausnummer</b></label>
+    <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
+
+    <label for="adress"><b>Postleitzahl und Stadt</b></label>
+    <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
+      
+
     <label for="username"><b>Name</b></label>
     <input type="text" placeholder="Name eingeben" name="username" id="username" required>
 
@@ -122,17 +123,12 @@
     <label for="psw-repeat"><b>Password Wiederholen</b></label>
     <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat" required>
     <hr>
-    <label for="adress"><b>Adresse und Hausnummer</b></label>
-    <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
-
-    <label for="adress"><b>Postleitzahl und Stadt</b></label>
-    <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
 
     <p>Mit dem Anlegen eines Kontos <a href="AGB.html">erklären Sie sich mit unseren Nutzungsbedingungen und dem
         Datenschutz einverstanden.</a>.</p>
     <div
       style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
-      <button type="button" id="registerbtn">Regristrieren</button>
+      <button type="submit" id="registerbtn">Regristrieren</button>
     </div>
   </div>
   <div
@@ -161,7 +157,13 @@
               adressPlace: $("#Postleitzahl").val()
             }),
             success: (data) => {
+              //$.cookie("token", data.token)
+              //$(document).attr("location", "../index.html");
               console.log(data);
+              localStorage.setItem("token", data.token);
+            },
+            error: (error) => {
+              alert(error.responseJSON.error);
             }
           })
         } else {
@@ -171,3 +173,4 @@
     })
   </script>
 </form>
+
