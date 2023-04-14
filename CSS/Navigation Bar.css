@@ -8,9 +8,12 @@ ul {
 }
 
 li {
-  padding: 14px 16px;
-  height:100%;
+  height: 100%;
   float: left;
+}
+
+.paddingwith {
+  padding: 14px 16px;
 }
 
 li a {
