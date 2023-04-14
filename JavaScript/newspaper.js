@@ -12,11 +12,12 @@ newsletterBtnClose.addEventListener("click", modalOpen)
 function modalOpen(){
     newsletter.classList.add("active");
     newsletterBtn.classList.add("active");
-    $(newsletterBtn).parents().classList.remove("paddingwith");
+    newsletterBtn.parentElement.classList.remove("paddingwith");
 };
 
 function modalClose(){
     newsletter.classList.remove("active");
     newsletterBtn.classList.remove("active");
-    $(newsletterBtn).parents().classList.add("paddingwith");
+    newsletterBtn.parentElement.classList.add("paddingwith");
+
 };
