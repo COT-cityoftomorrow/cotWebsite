@@ -96,4 +96,6 @@ a{
     font-size: 16px;
     font-weight: 400;
     text-transform: capitalize;
+    letter-spacing: -0.04em;
+    color: #282828;
 }
