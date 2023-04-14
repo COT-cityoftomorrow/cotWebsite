@@ -28,7 +28,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-  padding: 14px 16px;
+  padding: 20px 16px;
   background-color: #04AA6D;
 }
 #CoinAppIcon {
