@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200&display=swap');
+@import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
 
 *{
     padding: 0;
@@ -121,4 +121,18 @@ a{
 .newsletter-form input:focus{
     outline: 0;
     border: 1px solid #2d2d2d50;
+}
+
+.newsletter-form button{
+    width: 60%;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 12px;
+    margin-top: 10px;
+    height: 50px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
 }
