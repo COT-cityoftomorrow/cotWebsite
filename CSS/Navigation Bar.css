@@ -31,6 +31,5 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 #CoinAppIcon {
-  border-radius: 100%;
   width: 50px;
 }
