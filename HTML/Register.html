@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     border-width: 0;
-    
+
   }
 
   /* Add padding to containers */
@@ -142,26 +142,33 @@
   </div>
   <script>
     $(document).ready(() => {
-        $("#registerbtn").on("click", ()=> {
-          if ($("#psw").val() == $("#psw-repeat").val()) {
-            $.ajax({
-              method:"POST",
-              url: "http://localhost:3000/createUser",
-              data: {
-                email: $("#email").val(),
-                password: $("#psw").val(),
-                name: $("#username").val(),
-                adressStreet: $("#adress"),
-                adressPlace: $("#Postleitzahl")
-              },
-              success: (data) => {
-                console.log(data);
-              }
-            })
-          } else {
-            alert("Deine Passwörter stimmen nicht überein!");
-          }
-        })
+      $("#registerbtn").on("click", () => {
+        if ($("#psw").val() == $("#psw-repeat").val()) {
+          console.log({
+            email: $("#email").val(),
+            password: $("#psw").val(),
+            name: $("#username").val(),
+            adressStreet: $("#adress"),
+            adressPlace: $("#Postleitzahl")
+          });
+          /*$.ajax({
+            method:"POST",
+            url: "http://localhost:3000/createUser",
+            data: {
+              email: $("#email").val(),
+              password: $("#psw").val(),
+              name: $("#username").val(),
+              adressStreet: $("#adress"),
+              adressPlace: $("#Postleitzahl")
+            },
+            success: (data) => {
+              console.log(data);
+            }
+          })*/
+        } else {
+          alert("Deine Passwörter stimmen nicht überein!");
+        }
+      })
     })
   </script>
 </form>
