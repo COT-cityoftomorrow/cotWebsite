@@ -1,7 +1,9 @@
 ul {
   position: fixed;
   top: 0;
+  width: 100%;
   left: 0;
+  width: 100%;
   vertical-align: middle;
   list-style-type: none;
   margin: 0;
