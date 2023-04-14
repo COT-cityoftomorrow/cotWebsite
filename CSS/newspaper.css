@@ -1,3 +1,4 @@
+
 @import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
 
 *{
@@ -6,15 +7,7 @@
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #ff801e60;
-    font-family: 'Ubuntu', sans-serif;
-}
+
 a{
     text-decoration: none;
 }
@@ -28,7 +21,7 @@ a{
 }
 
 .container .newsletter-btn{
-    display: none;
+    display: block;
     background: #ff801e;
     color: #fff;
     align-items: center;
@@ -40,8 +33,11 @@ a{
 .container .newsletter-btn:hover{
     background: #282828;
 }
+.container .newsletter-btn.active{
+    display: none;
+}
 .container .newsletter{
-    display: block;
+    display: none;
     background: #fff;
     padding: 40px 30px;
     border-radius: 12px;
@@ -50,7 +46,7 @@ a{
 }
 
 .container .newsletter.active{
-    display: none;
+    display: block;
 }
 
 .newsletter .newsletter-icon{
