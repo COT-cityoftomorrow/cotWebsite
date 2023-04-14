@@ -145,15 +145,17 @@
       $("#registerbtn").on("click", () => {
         if ($("#psw").val() == $("#psw-repeat").val()) {
           $.ajax({
-            method:"POST",
+            method: "POST",
             url: "http://localhost:3000/createUser",
-            data: {
-            email: $("#email").val(),
-            password: $("#psw").val(),
-            name: $("#username").val(),
-            adressStreet: $("#adress").val(),
-            adressPlace: $("#Postleitzahl").val()
-            },
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify({
+              email: $("#email").val(),
+              password: $("#psw").val(),
+              name: $("#username").val(),
+              adressStreet: $("#adress").val(),
+              adressPlace: $("#Postleitzahl").val()
+            }),
             success: (data) => {
               console.log(data);
             }
