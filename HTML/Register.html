@@ -144,27 +144,22 @@
     $(document).ready(() => {
       $("#registerbtn").on("click", () => {
         if ($("#psw").val() == $("#psw-repeat").val()) {
-          console.log({
-            email: $("#email").val(),
-            password: $("#psw").val(),
-            name: $("#username").val(),
-            adressStreet: $("#adress"),
-            adressPlace: $("#Postleitzahl")
-          });
-          /*$.ajax({
-            method:"POST",
+          $.ajax({
+            method: "POST",
             url: "http://localhost:3000/createUser",
-            data: {
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify({
               email: $("#email").val(),
               password: $("#psw").val(),
               name: $("#username").val(),
-              adressStreet: $("#adress"),
-              adressPlace: $("#Postleitzahl")
-            },
+              adressStreet: $("#adress").val(),
+              adressPlace: $("#Postleitzahl").val()
+            }),
             success: (data) => {
               console.log(data);
             }
-          })*/
+          })
         } else {
           alert("Deine Passwörter stimmen nicht überein!");
         }
