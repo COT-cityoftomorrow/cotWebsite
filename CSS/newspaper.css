@@ -99,3 +99,26 @@ a{
     letter-spacing: -0.04em;
     color: #282828;
 }
+
+.newsletter .newsletter-form{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%
+}
+
+.newsletter-form input{
+    width: 100%;
+    border: 1px solid #dedede;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    border-radius: 12px;
+    background: ebecf090;
+}
+
+.newsletter-form input:focus{
+    outline: 0;
+    border: 1px solid #2d2d2d50;
+}
