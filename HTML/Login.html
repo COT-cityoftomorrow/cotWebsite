@@ -1,0 +1,92 @@
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../CSS/Navigation Bar.css" <!-- Button to open the modal login form -->
+<ul>
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="Register.html">Regristrieren</a></li>
+  <li><a href="Contact.html">Kontakt</a></li>
+  <li style="float:right"><a class="active" href="Impressum.html">Impressum</a></li>
+  <li style="float:right"><a class="active" href="UeberUns.html">Über Uns</a></li>
+</ul>
+<div id="id01" class="modal">
+  <br><br>
+  <form class="modal-content animate" action="/action_page.php"
+    style='display: flex; width: 100%; flex-direction: column; justify-content: center; row-gap: 0px; align-items: center; text-align: center;'>
+    <img style="width: 100px; border-radius: 100%;" src="../Fotos/user2.png" alt="User_PNG"><br><br>
+    <label for="uname"><b>Username</b></label><br><br>
+    <input class="eingabefeld" type="text" placeholder="Enter Username or E-mail" name="uname" required>
+    <br><br><br>
+    <label for="psw"><b>Password</b></label><br><br>
+    <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" required>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label><br>
+    <button id="btnlogin" type="submit">Login</button>
+    <span id="pswforgotten" class="psw"><a href="passwortvergessen.html" style="text-decoration: none; color: white;" >Passwort vergessen?</a></span>
+    <span id="Regristrierung" class="psw"><a href="Register.html" style="text-decoration: none; color: white;" >Kein Konto, regristrieren sie sich jetzt!</a></span>
+  </form>
+ 
+  <style>
+    @import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
+
+  #btnlogin {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#pswforgotten {
+  background-color: #04AA6D;
+  border: none;
+  padding: 10px 50px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-bottom: 55px;
+}
+
+#Regristrierung {
+  background-color: #04AA6D;
+  border: none;
+  padding: 10px 50px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-top: -45px;
+}
+
+
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+    }
+
+    html {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+    }
+
+    .eingabefeld {
+      align-self: Center;
+      padding: 10px;
+      border: 1px black Solid;
+      border-radius: 10px;
+      display: block;
+    }
+  </style>
+</div>
