@@ -28,5 +28,8 @@ li a:hover:not(.active) {
 }
 
 .active {
+  height: 100%;
+  width: 100%;
+  padding: 14px 16px;
   background-color: #04AA6D;
 }
