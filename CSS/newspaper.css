@@ -49,14 +49,19 @@ a{
     height: 360px;
 }
 
+.container .newsletter.active{
+    display: none;
+}
+
 .newsletter .newsletter-icon{
     background: #ff801e;
     display: inline-block;
     padding: 12px 15px;
-    border: radius 50%;
+    border-radius: 50%;
     border: 5px solid #fff;
     position: absolute;
     transform: translate(180px, -80px);
+    position: -10px;
 }
 
 .newsletter .newsletter-icon i{
@@ -135,4 +140,25 @@ a{
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: -0.02em;
+    background: #ff801e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.newsletter-form button:hover{
+    background: #282828;
+}
+
+.newsletter a{
+    text-align: center;
+    display: grid;
+    margin-top: 40px;
+    width: 100%;
+    color: #747474;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.newsletter a:hover{
+    color: #ff801e
 }
