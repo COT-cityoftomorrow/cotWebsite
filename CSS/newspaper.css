@@ -20,19 +20,18 @@ a{
     width: 520px;
 }
 
-.container .newsletter-btn{
+/*.container .newsletter-btn{
     display: block;
     background: #333;
     color: #fff;
     align-items: center;
-    padding: 14px 32px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 12px;
     margin-right: 640px;
     margin-top: -49px;
     
-}
+}*/
 .container .newsletter-btn:hover{
     background: #282828;
 }
