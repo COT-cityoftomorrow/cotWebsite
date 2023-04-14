@@ -17,6 +17,8 @@ a{
     top: 100px;
     left: calc(50% - 260px);
     display: flex;
+    box-shadow: 10px solid black;
+    z-index: 200;
     align-items: center;
     justify-content: center;
     margin: auto;
