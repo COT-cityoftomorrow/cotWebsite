@@ -12,26 +12,30 @@ a{
 }
 
 .container{
+    position: fixed;
+    top: 100px;
+    left: calc(50% - 260px);
     display: flex;
+    box-shadow: 10px solid black;
+    z-index: 200;
     align-items: center;
     justify-content: center;
     margin: auto;
     width: 520px;
 }
 
-.container .newsletter-btn{
+/*.container .newsletter-btn{
     display: block;
     background: #333;
     color: #fff;
     align-items: center;
-    padding: 14px 32px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 12px;
     margin-right: 640px;
     margin-top: -49px;
     
-}
+}*/
 .container .newsletter-btn:hover{
     background: #282828;
 }
