@@ -5,7 +5,7 @@ const newsletter = document.querySelector(".newsletter");
 
 //event listener
 newsletterBtn.addEventListener("click", modalOpen)
-newsletterBtnClose.addEventListener("click", modalOpen)
+newsletterBtnClose.addEventListener("click", modalClose)
 
 //function
 
