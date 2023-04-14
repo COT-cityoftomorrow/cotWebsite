@@ -157,10 +157,8 @@
               adressPlace: $("#Postleitzahl").val()
             }),
             success: (data) => {
-              console.log(data.token)
               $.cookie("token", data.token)
-              console.log($.cookie("token"))
-              //$(document).attr("location", "../index.html");
+              $(document).attr("location", "../index.html");
             },
             error: (error) => {
               alert(error.responseJSON.error);
