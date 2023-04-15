@@ -15,14 +15,22 @@
     <li style="float:right"> <a class="active" href="Impressum.html">Impressum</a></li>
   </ul><br><br>
 
-<h1>Impressum</h1>
-<h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-<p>Lonnie Schemann<br />
-  Donders-Ring 4<br />
-  48151 M&uuml;nster</p>
-<h2>Kontakt</h2>
-<p>Telefon: 0170117981<br />
-  E-Mail: lonnie.schemann@posteo.de</p>
+  <section id="impressum">
+    <h1>Impressum</h1>
+    <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+    <p>Lonnie Andreas Schemann<br />
+    Donders-Ring 4<br />
+    48151 M&uuml;nster</p>
+
+    <h2>Kontakt</h2>
+    <p>Telefon: 01701179281<br />
+    E-Mail: lonnie.schemann@posteo.de</p>
+
+    <!--<h2>Redaktionell verantwortlich</h2>
+    <p>--- Name folgt ---</p>-->
+
+    <p>Quelle: <a href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-generator.html</a></p>
+    </section>
 
   <div class="container">
 
@@ -45,7 +53,28 @@
 </div>
 <style>
   @import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
-
+  #impressum {
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        color: white;
+        height: 100vh;
+        width: 100vw;
+        background-color: black;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px 30px 30px 30px;
+    }
+    #impressum h1{
+        font-size: 70px;
+    }
+    #impressum h2 {
+        font-size: 40px;
+    }
+    #impressum p {
+        font-size: 30px;
+    }
   body {
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
