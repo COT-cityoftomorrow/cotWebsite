@@ -9,13 +9,13 @@ newsletterBtnClose.addEventListener("click", modalClose)
 
 //function
 
-function modalOpen(){
+function modalOpen() {
     newsletter.classList.add("active");
     newsletterBtn.classList.add("active");
     newsletterBtn.parentElement.classList.remove("paddingwith");
 };
 
-function modalClose(){
+function modalClose() {
     newsletter.classList.remove("active");
     newsletterBtn.classList.remove("active");
     newsletterBtn.parentElement.classList.add("paddingwith");
@@ -32,5 +32,21 @@ if (localStorage.getItem("token") != undefined && localStorage.getItem("token") 
     $("a[href='Register.html']").parent("li").css("display", "none");
 }
 $("button[type='submit']").on("click", () => {
-    
+    $.ajax({
+        method: "POST",
+        url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/newsletter",
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify({
+            email: $(".newsletter-form").children()[0].val(),
+        }),
+        success: (data) => {
+            console.log($(".newsletter-form").children()[0].val());
+            alert(data);
+        },
+        error: (error) => {
+            console.log($(".newsletter-form").children()[0].val());
+            alert(error.responseJSON.error);
+        }
+    })
 })
