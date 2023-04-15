@@ -43,21 +43,42 @@
   <form class="modal-content animate" action="/action_page.php"
     style='display: flex; width: 100%; flex-direction: column; justify-content: center; row-gap: 0px; align-items: center; text-align: center;'>
     <img style="width: 100px; border-radius: 100%;" src="../Fotos/user2.png" alt="User_PNG"><br><br>
-    <label for="uname"><b>Username</b></label><br><br>
-    <input class="eingabefeld" type="text" placeholder="Enter Username or E-mail" name="uname" required>
+    <label for="uname"><b>E-Mail</b></label><br><br>
+    <input class="eingabefeld" type="text" placeholder="E-Mail eintragen" name="uname" id="email" required>
     <br><br><br>
     <label for="psw"><b>Password</b></label><br><br>
-    <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" required>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label><br>
+    <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <br>
     <button id="btnlogin" type="submit">Login</button>
     <span id="pswforgotten" class="psw"><a href="passwortvergessen.html" style="text-decoration: none; color: white;" >Passwort vergessen?</a></span>
     <span id="Regristrierung" class="psw"><a href="Register.html" style="text-decoration: none; color: white;" >Kein Konto, Registrieren sie sich jetzt!</a></span>
   </form>
 
  
-
+<script>
+  $(document).ready(() => {
+      $("#registerbtn").on("click", () => {
+        $.ajax({
+          method: "POST",
+          url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/login",
+          contentType: 'application/json',
+          dataType: 'json',
+          data: JSON.stringify({
+            email: $("#email").val(),
+            password: $("#psw").val()
+          }),
+          success: (data) => {
+            //$.cookie("token", data.token)
+            localStorage.setItem("token", data.token);
+            $(document).attr("location", "../index.html");
+          },
+          error: (error) => {
+            alert(error.responseJSON.error);
+          }
+        })
+      })
+    })
+</script>
   <style>
     @import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
 
