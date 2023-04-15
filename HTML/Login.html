@@ -2,6 +2,9 @@
 <title>Anmelden</title>
 <script defer src="../JavaScript/newspaper.js"></script>
 <link rel="stylesheet" href="../CSS/newspaper.css">
+<link rel="stylesheet" href="../CSS/newspaper.css">
+<script src=    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+<script defer src="JavaScript/darktheme.js"></script>
 
 <link rel="stylesheet" href="../CSS/Navigation Bar.css" <!-- Button to open the modal login form -->
 <ul>
@@ -12,6 +15,7 @@
   <li class="paddingwith"><a href="Contact.html">Kontakt</a></li>
   <li class="paddingwith"><a href="Register.html">Registrieren</a></li>
   <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
+  <li class="paddingwith"><span class="change" style=" color: white;">Light Mode</span></li>
   <li style="float:right"> <a class="active" href="UeberUns.html">Über Uns</a></li>
   <li style="float:right"> <a class="active" href="Impressum.html">Impressum</a></li>
 </ul><br><br>
@@ -36,24 +40,45 @@
 </div>
 <div id="id01" class="modal">
   <br><br>
-  <form class="modal-content animate" action="/action_page.php"
+  <form class="modal-content animate" 
     style='display: flex; width: 100%; flex-direction: column; justify-content: center; row-gap: 0px; align-items: center; text-align: center;'>
     <img style="width: 100px; border-radius: 100%;" src="../Fotos/user2.png" alt="User_PNG"><br><br>
-    <label for="uname"><b>Username</b></label><br><br>
-    <input class="eingabefeld" type="text" placeholder="Enter Username or E-mail" name="uname" required>
+    <label for="uname"><b>E-Mail</b></label><br><br>
+    <input class="eingabefeld" type="text" placeholder="E-Mail eintragen" name="uname" id="email" required>
     <br><br><br>
     <label for="psw"><b>Password</b></label><br><br>
-    <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" required>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label><br>
-    <button id="btnlogin" type="submit">Login</button>
+    <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <br>
+    <button id="btnlogin" type="button">Login</button>
     <span id="pswforgotten" class="psw"><a href="passwortvergessen.html" style="text-decoration: none; color: white;" >Passwort vergessen?</a></span>
     <span id="Regristrierung" class="psw"><a href="Register.html" style="text-decoration: none; color: white;" >Kein Konto, Registrieren sie sich jetzt!</a></span>
   </form>
 
  
-
+<script>
+  $(document).ready(() => {
+      $("#btnlogin").on("click", () => {
+        $.ajax({
+          method: "POST",
+          url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/login",
+          contentType: 'application/json',
+          dataType: 'json',
+          data: JSON.stringify({
+            email: $("#email").val(),
+            password: $("#psw").val()
+          }),
+          success: (data) => {
+            //$.cookie("token", data.token)
+            localStorage.setItem("token", data.token);
+            $(document).attr("location", "../index.html");
+          },
+          error: (error) => {
+            alert(error.responseJSON.error);
+          }
+        })
+      })
+    })
+</script>
   <style>
     @import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
 

@@ -5,6 +5,9 @@
 <script src="../JavaScript/jquery-3.6.4.min.js"></script>
 <script src="../JavaScript/jquery.cookie.js"></script>
 <link rel="stylesheet" href="../CSS/newspaper.css">
+<link rel="stylesheet" href="../CSS/newspaper.css">
+<script src=    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+<!--<script defer src="JavaScript/darktheme.js"></script>-->
 
 <title>Registrieren</title>
 <ul>
@@ -15,6 +18,7 @@
   <li class="paddingwith"><a href="Contact.html">Kontakt</a></li>
   <li class="active"><a href="Register.html">Registrieren</a></li>
   <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
+  <!--<li class="paddingwith"><span class="change" style=" color: white;">Light Mode</span></li>-->
   <li style="float:right"> <a class="active" href="UeberUns.html">Über Uns</a></li>
   <li style="float:right"> <a class="active" href="Impressum.html">Impressum</a></li>
 </ul><br><br>
@@ -159,7 +163,7 @@
       </div>
 
       <div class="newsletter-form">
-        <input type="email" name="" id="" placeholder="Deine E-Mail" required>
+        <input type="email" name="email" id="" placeholder="Deine E-Mail" required>
         <button type="submit">Abonniere</button>
       </div>
 
@@ -172,7 +176,7 @@
         if ($("#psw").val() == $("#psw-repeat").val()) {
           $.ajax({
             method: "POST",
-            url: "http://localhost:3000/createUser",
+            url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/createUser",
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -184,9 +188,8 @@
             }),
             success: (data) => {
               //$.cookie("token", data.token)
-              //$(document).attr("location", "../index.html");
-              console.log(data);
               localStorage.setItem("token", data.token);
+              $(document).attr("location", "../index.html");
             },
             error: (error) => {
               alert(error.responseJSON.error);
