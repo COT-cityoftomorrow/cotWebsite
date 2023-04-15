@@ -188,9 +188,8 @@
             }),
             success: (data) => {
               //$.cookie("token", data.token)
-              //$(document).attr("location", "../index.html");
-              console.log(data);
               localStorage.setItem("token", data.token);
+              $(document).attr("location", "../index.html");
             },
             error: (error) => {
               alert(error.responseJSON.error);
