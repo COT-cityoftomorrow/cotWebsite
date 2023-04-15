@@ -26,6 +26,9 @@ setInterval(modalOpen(), 60000);
 if (localStorage.getItem("token") != undefined && localStorage.getItem("token") != "" && localStorage.getItem("token") != null) {
     $("a[href='HTML/Login.html']").parent("li").css("display", "none");
     $("a[href='../HTML/Login.html']").parent("li").css("display", "none");
+    $("a[href='Login.html']").parent("li").css("display", "none");
     $("a[href='HTML/Register.html']").parent("li").css("display", "none");
     $("a[href='../HTML/Register.html']").parent("li").css("display", "none");
+    $("a[href='Register.html']").parent("li").css("display", "none");
 }
+$("button")
