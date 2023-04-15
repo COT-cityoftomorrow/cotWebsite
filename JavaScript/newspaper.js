@@ -41,14 +41,14 @@ $("button[type='submit']").on("click", () => {
         contentType: 'application/json',
         dataType: 'json',
         data: JSON.stringify({
-            email: $(".newsletter-form").children()[0].val(),
+            email: $(".newsletter-form").children("input").val(),
         }),
         success: (data) => {
-            console.log($(".newsletter-form").children()[0].val());
+            console.log($(".newsletter-form").children("input").val());
             alert(data);
         },
         error: (error) => {
-            console.log($(".newsletter-form").children()[0].val());
+            console.log($(".newsletter-form").children("input").val());
             alert(error.responseJSON.error);
         }
     })
