@@ -176,7 +176,7 @@
         if ($("#psw").val() == $("#psw-repeat").val()) {
           $.ajax({
             method: "POST",
-            url: "http://localhost:3000/createUser",
+            url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/createUser",
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -187,10 +187,10 @@
               adressPlace: $("#Postleitzahl").val()
             }),
             success: (data) => {
-              //$.cookie("token", data.token)
+              $.cookie("token", data.token)
               //$(document).attr("location", "../index.html");
               console.log(data);
-              localStorage.setItem("token", data.token);
+              //localStorage.setItem("token", data.token);
             },
             error: (error) => {
               alert(error.responseJSON.error);
