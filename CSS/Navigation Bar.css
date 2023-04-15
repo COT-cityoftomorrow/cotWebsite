@@ -18,8 +18,12 @@ li {
   float: left;
 }
 
-li .special{
-  float: right;
+.special {
+  display: block;
+  height: 100%; 
+  min-height: 60px;
+  padding: 20px 16px;
+  background-color: #333;
 }
 
 .paddingwith {
