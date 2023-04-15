@@ -31,4 +31,6 @@ if (localStorage.getItem("token") != undefined && localStorage.getItem("token") 
     $("a[href='../HTML/Register.html']").parent("li").css("display", "none");
     $("a[href='Register.html']").parent("li").css("display", "none");
 }
-$("button[type='submit']").on("click", () =>)
+$("button[type='submit']").on("click", () => {
+    
+})
