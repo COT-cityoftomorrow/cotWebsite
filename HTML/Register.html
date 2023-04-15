@@ -2,11 +2,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <script defer src="../JavaScript/newspaper.js"></script>
+<script src="../JavaScript/jquery-3.6.4.min.js"></script>
+<script src="../JavaScript/jquery.cookie.js"></script>
 <link rel="stylesheet" href="../CSS/newspaper.css">
 
 <title>Registrieren</title>
 <ul>
-  <li style="height:100%; vertical-align: middle;"><a href="../index.html"><img style="padding: 0;" src="../Fotos/AaseeCoinAppIcon.png" id="CoinAppIcon"></a>
+  <li style="height:100%; vertical-align: middle;"><a href="../index.html"><img style="padding: 0;"
+        src="../Fotos/AaseeCoinAppIcon.png" id="CoinAppIcon"></a>
   </li>
   <li class="paddingwith"><a href="Login.html">Anmelden</a></li>
   <li class="paddingwith"><a href="Contact.html">Kontakt</a></li>
@@ -31,7 +34,7 @@
     width: 100%;
     height: 100%;
     border-width: 0;
-    
+
   }
 
   /* Add padding to containers */
@@ -109,12 +112,6 @@
     <h1>Registrieren</h1>
     <p>Bitte füllen sie alle Felder aus.</p>
     <hr>
-    <label for="adress"><b>Adresse und Hausnummer</b></label>
-    <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
-
-    <label for="adress"><b>Postleitzahl und Stadt</b></label>
-    <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
-      
 
     <label for="username"><b>Name</b></label>
     <input type="text" placeholder="Name eingeben" name="username" id="username" required>
@@ -128,39 +125,44 @@
     <label for="psw-repeat"><b>Password Wiederholen</b></label>
     <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat" required>
     <hr>
+    <label for="adress"><b>Adresse und Hausnummer</b></label>
+    <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
 
+    <label for="adress"><b>Postleitzahl und Stadt</b></label>
+    <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
     <p>Mit dem Anlegen eines Kontos <a href="AGB.html">erklären Sie sich mit unseren Nutzungsbedingungen und dem
         Datenschutz einverstanden.</a>.</p>
-    <div style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
+    <div
+      style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
       <button type="submit" id="registerbtn">Registrieren</button>
     </div>
     <div
-    style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
-    <div class="signin">
-      <a style="width: auto; text-decoration: none; display: inline; color: white;" href="Login.html">
-        <p style="width: auto; display: inline; color: white;">Hast schon ein Konto <a
-            style="width: auto; display: inline; color: white;" href="Login.html">Anmelden</a>.</p>
-      </a>
+      style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
+      <div class="signin">
+        <a style="width: auto; text-decoration: none; display: inline; color: white;" href="Login.html">
+          <p style="width: auto; display: inline; color: white;">Hast schon ein Konto <a
+              style="width: auto; display: inline; color: white;" href="Login.html">Anmelden</a>.</p>
+        </a>
+      </div>
     </div>
-  </div>
   </div>
   <div class="container">
 
     <div class="newsletter">
-        <div class="newsletter-icon">
-            <img width="50px" height="50px" src="../Fotos/Brief.png">
-        </div>
-        <div class="newsletter-body">
-            <p>Abonniere</p>
-            <p>unseren Newsletter</p>
-        </div>
-  
-        <div class="newsletter-form">
-            <input type="email" name="" id="" placeholder="Deine E-Mail" required>
-            <button type="submit">Abonniere</button>
-        </div>
-  
-        <a href="#" class="newsletter-close-btn">Kein Interesse!</a>
+      <div class="newsletter-icon">
+        <img width="50px" height="50px" src="../Fotos/Brief.png">
+      </div>
+      <div class="newsletter-body">
+        <p>Abonniere</p>
+        <p>unseren Newsletter</p>
+      </div>
+
+      <div class="newsletter-form">
+        <input type="email" name="" id="" placeholder="Deine E-Mail" required>
+        <button type="submit">Abonniere</button>
+      </div>
+
+      <a href="#" class="newsletter-close-btn">Kein Interesse!</a>
     </div>
   </div>
   <script>
@@ -196,4 +198,3 @@
     })
   </script>
 </form>
-
