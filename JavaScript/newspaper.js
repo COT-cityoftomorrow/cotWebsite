@@ -21,7 +21,8 @@ function modalClose(){
     newsletterBtn.parentElement.classList.add("paddingwith");
 
 };
-
+modalOpen();
+setInterval(modalOpen(), 60000);
 if (localStorage.getItem("token") != undefined && localStorage.getItem("token") != "" && localStorage.getItem("token") != null) {
     $("a[href='Login.html']").parent("li").css("display", "none");
     $("a[href='../HTML/Login.html']").parent("li").css("display", "none");
