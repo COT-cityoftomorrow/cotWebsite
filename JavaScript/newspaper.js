@@ -44,7 +44,7 @@ $("button[type='submit']").on("click", () => {
             email: $(".newsletter-form").children("input").val(),
         }),
         success: (data) => {
-            console.log(data.responseJSON);
+            console.log(data);
         },
         error: (error) => {
             alert(error.responseJSON.error);
