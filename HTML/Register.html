@@ -1,15 +1,27 @@
 <link rel="stylesheet" href="../CSS/Navigation Bar.css">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<script defer src="../JavaScript/newspaper.js"></script>
+<script src="../JavaScript/jquery-3.6.4.min.js"></script>
+<script src="../JavaScript/jquery.cookie.js"></script>
+<link rel="stylesheet" href="../CSS/newspaper.css">
+<link rel="stylesheet" href="../CSS/newspaper.css">
+<script src=    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+<!--<script defer src="JavaScript/darktheme.js"></script>-->
 
 <title>Registrieren</title>
 <ul>
-  <li><a href="Login.html">Anmelden</a></li>
-  <li><a href="Contact.html">Kontakt</a></li>
-  <li><a href="../index.html">Home</a></li>
-  <li style="float:right"><a class="active" href="Impressum.html">Impressum</a></li>
-  <li style="float:right"><a class="active" href="UeberUns.html">Über Uns</a></li>
-</ul>
+  <li style="height:100%; vertical-align: middle;"><a href="../index.html"><img style="padding: 0;"
+        src="../Fotos/AaseeCoinAppIcon.png" id="CoinAppIcon"></a>
+  </li>
+  <li class="paddingwith"><a href="Login.html">Anmelden</a></li>
+  <li class="paddingwith"><a href="Contact.html">Kontakt</a></li>
+  <li class="active"><a href="Register.html">Registrieren</a></li>
+  <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
+  <!--<li class="paddingwith"><span class="change" style=" color: white;">Light Mode</span></li>-->
+  <li style="float:right"> <a class="active" href="UeberUns.html">Über Uns</a></li>
+  <li style="float:right"> <a class="active" href="Impressum.html">Impressum</a></li>
+</ul><br><br>
 
 
 
@@ -26,7 +38,7 @@
     width: 100%;
     height: 100%;
     border-width: 0;
-    
+
   }
 
   /* Add padding to containers */
@@ -101,15 +113,9 @@
 
 <form action="action_page.php">
   <div class="container">
-    <h1>Regristrieren</h1>
+    <h1>Registrieren</h1>
     <p>Bitte füllen sie alle Felder aus.</p>
     <hr>
-    <label for="adress"><b>Adresse und Hausnummer</b></label>
-    <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
-
-    <label for="adress"><b>Postleitzahl und Stadt</b></label>
-    <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
-      
 
     <label for="username"><b>Name</b></label>
     <input type="text" placeholder="Name eingeben" name="username" id="username" required>
@@ -122,22 +128,46 @@
 
     <label for="psw-repeat"><b>Password Wiederholen</b></label>
     <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat" required>
-    <hr>
 
+    <label for="adress"><b>Adresse und Hausnummer</b></label>
+    <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
+
+    <label for="adress"><b>Postleitzahl und Stadt</b></label>
+    <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
     <p>Mit dem Anlegen eines Kontos <a href="AGB.html">erklären Sie sich mit unseren Nutzungsbedingungen und dem
         Datenschutz einverstanden.</a>.</p>
     <div
       style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
-      <button type="submit" id="registerbtn">Regristrieren</button>
+      <button type="submit" id="registerbtn">Registrieren</button>
+    </div>
+    <hr>
+    <div
+      style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
+      <div class="signin">
+        <a style="width: auto; text-decoration: none; display: inline; color: white;" href="Login.html">
+          <p style="width: auto; display: inline; color: white;">Hast schon ein Konto <a
+              style="width: auto; display: inline; color: white;" href="Login.html">Anmelden</a>.</p>
+        </a>
+      </div>
     </div>
   </div>
-  <div
-    style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
-    <div class="signin">
-      <a style="width: auto; text-decoration: none; display: inline; color: white;" href="Login.html">
-        <p style="width: auto; display: inline; color: white;">Hast schon ein Konto <a
-            style="width: auto; display: inline; color: white;" href="Login.html">Anmelden</a>.</p>
-      </a>
+  <div class="container">
+
+    <div class="newsletter">
+      <div class="newsletter-icon">
+        <img width="50px" height="50px" src="../Fotos/Brief.png">
+      </div>
+      <div class="newsletter-body">
+        <p>Abonniere</p>
+        <p>unseren Newsletter</p>
+      </div>
+
+      <div class="newsletter-form">
+        <input type="email" name="email" id="" placeholder="Deine E-Mail">
+        <button type="submit">Abonniere</button>
+      </div>
+
+      <a href="#" class="newsletter-close-btn">Kein Interesse!</a>
     </div>
   </div>
   <script>
@@ -146,7 +176,7 @@
         if ($("#psw").val() == $("#psw-repeat").val()) {
           $.ajax({
             method: "POST",
-            url: "http://localhost:3000/createUser",
+            url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/createUser",
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -158,9 +188,8 @@
             }),
             success: (data) => {
               //$.cookie("token", data.token)
-              //$(document).attr("location", "../index.html");
-              console.log(data);
               localStorage.setItem("token", data.token);
+              $(document).attr("location", "../index.html");
             },
             error: (error) => {
               alert(error.responseJSON.error);
@@ -173,4 +202,3 @@
     })
   </script>
 </form>
-

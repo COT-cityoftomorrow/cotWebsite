@@ -1,83 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
-    <link rel="stylesheet" href="../CSS/Navigation Bar.css"
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AaseeCoin</title>
+  <link rel="stylesheet" href="../CSS/Navigation Bar.css" <meta name="viewport"
+    content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <script defer src="../JavaScript/newspaper.js"></script>
+  <link rel="stylesheet" href="/CSS/newspaper.css">
+  <link rel="stylesheet" href="../CSS/newspaper.css">
+  <script src=    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+  <script defer src="JavaScript/darktheme.js"></script>
 
+  <link rel="stylesheet" href="../CSS/Navigation Bar.css" <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <ul>
+    <li style="height:100%; vertical-align: middle;"><a style="height: 100%;" href="../index.html"><img
+          style="padding: 0; height:100%;" src="../Fotos/AaseeCoinAppIcon.png" id="CoinAppIcon"></a>
+    </li>
+    <li class="paddingwith"><a href="Login.html">Anmelden</a></li>
+    <li class="active"><a href="Contact.html">Kontakt</a></li>
+    <li class="paddingwith"><a href="Register.html">Registrieren</a></li>
+    <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
+  <!--<li class="paddingwith"><span class="change" style=" color: white;">Light Mode</span></li>-->
+  <li style="float:right"> <a class="active" href="UeberUns.html">Über Uns</a></li>
+    <li style="float:right"> <a class="active" href="Impressum.html">Impressum</a></li>
+  </ul><br><br>
 
-    <ul>
-      <li><a href="Login.html">Anmelden</a></li>
-      <li><a href="Contact.html">Kontakt</a></li>
-      <li><a href="../index.html">Home</a></li>
-      <li style="float:right"><a class="active" href="Impressum.html">Impressum</a></li>
-      <li style="float:right"><a class="active" href="UeberUns.html">Über Uns</a></li>
-    </ul><br><br>
+  
+  <div class="container">
+    <form action="action_page.php">
 
+      <label for="fname">Vorname</label>
+      <input type="text" id="fname" name="firstname" placeholder="Dein Vorname.." required>
 
-    <div class="container">
-        <form action="action_page.php">
+      <label for="lname">Nachname</label>
+      <input type="text" id="lname" name="lastname" placeholder="Dein Nachname.." required>
+
+      <label for="country">Land</label>
+      <select>
+        <option value="">Wählen Sie ein Land</option>
+        <option value="AB">Abchasien</option>
+        <option value="AF">Afghanistan</option>
+        <option value="EG">Ägypten</option>
+        <option value="AL">Albanien</option>
+        <option value="DZ">Algerien</option>
+        <option value="AD">Andorra</option>
+        <option value="AO">Angola</option>
+        <option value="AI">Anguilla</option>
+        <option value="AQ">Antarktis</option>
+        <option value="AG">Antigua und Barbuda</option>
+        <option value="GQ">Äquatorialguinea</option>
+        <option value="AR">Argentinien</option>
+        <option value="AQ">Arktis</option>
+        <option value="AM">Armenien</option>
+        <option value="AW">Aruba</option>
+        <option value="AZ">Aserbaidschan</option>
+        <option value="ET">Äthiopien</option>
+        <option value="AU">Australien</option>
+        <option value="PT">Azoren</option>
+        <option value="BS">Bahamas</option>
+        <option value="BH">Bahrain</option>
+        <option value="BD">Bangladesch</option>
+        <option value="BB">Barbados</option>
+        <option value="BY">Belarus</option>
+        <option value="BE">Belgien</option>
+        <option value="BZ">Belize</option>
+        <option value="BJ">Benin</option>
+        <option value="BT">Bhutan</option>
+        <option value="BO">Bolivien</option>
+        <option value="BA">Bosnien und Herzegowina</option>
+        <option value="BW">Botsuana</option>
+        <option value="BR">Brasilien</option>
+        <option value="BN">Brunei</option>
+        <option value="BG">Bulgarien</option>
+        <option value="BF">Burkina Faso</option>
+        <option value="MM">Birma/Burma</option>
+        <option value="BI">Burundi</option>
+        <option value="CL">Chile</option>
+        <option value="CN">China</option>
+        <option value="CK">Cookinseln</option>
+        <option value="CR">Costa Rica</option>
+        <option value="CW">Curaçao</option>
+        <option value="DK">Dänemark</option>
+        <option value="CD">Demokratische Republik Kongo</option>
+        <option value="DE">Deutschland</option>
+        <option value="DM">Dominica</option>
+        <option value="DO">Dominikanische Republik</option>
+        <option value="DJ">Dschibuti</option>
+        <option value="EC">Ecuador</option>
+        <option value="CI">Elfenbeinküste</option>
+        <option value="SV">El Salvador</option>
+        <option value="ER">Eritrea</option>
+        <option value="EE">Estland</option>
+        <option value="SZ">Eswatini</option>
+        <option value="FK">Falklandinseln</option>
+        <option value="FJ">Fidschi</option>
+        <option value="FI">Finnland</option>
+        <option value="FM">Föderierte Staaten von Mikronesien</option>
+        <option value="FR">Frankreich</option>
+        <option value="PF">Französisch-Polynesien</option>
+        <option value="GF">Französisch-Guayana</option>
+        <option value="GA">Gabun</option>
+        <option value="GM">Gambia</option>
+        <option value="GE">Georgien</option>
+        <option value="GH">Ghana</option>
+        <option value="GD">Grenada</option>
+        <option value="GR">Griechenland</option>
+        <option value="GB">Großbritannien</option>
+        <option value="GL">Grönland</option>
+        <option value="GP">Guadeloupe</option>
+        <option value="GT">Guatemala</option>
+        <option value="GN">Guinea</option>
+        <option value="GW">Guinea-Bissau</option>
+        <option value="GY">Guyana</option>
+        <option value="HT">Haiti</option>
+        <option value="HN">Honduras</option>
+        <option value="IN">Indien</option>
+        <option value="ID">Indonesien</option>
+        <option value="IQ">Irak</option>
+        <option value="IR">Iran</option>
+        <option value="IE">Irland</option>
+        <option value="IS">Island</option>
+        <option value="IL">Israel</option>
+        <option value="IT">Italien</option>
+        <option value="JM">Jamaika</option>
+        <option value="JP">Japan</option>
+        <option value="YE">Jemen</option>
+        <option value="JO">Jordanien</option>
+        <option value="KH">Kambodscha</option>
+        <option value="CM">Kamerun</option>
+        <option value="CA">Kanada</option>
+        <option value="CV">Kap Verde</option>
+        <option value="KZ">Kasachstan</option>
+        <option value="QA">Katar</option>
+        <option value="KE">Kenia</option>
+        <option value="KG">Kirgisistan</option>
+        <option value="KI">Kiribati</option>
+        <option value="CO">Kolumbien</option>
+        <option value="KM">Komoren</option>
+        <option value="CG">Kongo (Republik)</option>
+        <option value="HR">Kroatien</option>
+        <option value="CU">Kuba</option>
+        <option value="KW">Kuwait</option>
+        <option value="XK">Kosovo</option>
+        <option value="LA">Laos</option>
+        <option value="LS">Lesotho</option>
+        <option value="LV">Lettland</option>
+        <option value="LB">Libanon</option>
+        <option value="LR">Liberia</option>
+        <option value="LY">Libyen</option>
+        <option value="LI">Liechtenstein</option>
+        <option value="LT">Litauen</option>
+        <option value="LU">Luxemburg</option>
+        <option value="MG">Madagaskar</option>
+        <option value="MA">Madeira</option>
+        <option value="MW">Malawi</option>
+        <option value="MY">Malaysia</option>
+        <option value="MV">Malediven</option>
+        <option value="ML">Mali</option>
+        <option value="MT">Malta</option>
+        <option value="MA">Marokko</option>
+        <option value="MH">Marshallinseln</option>
+        <option value="MQ">Martinique</option>
+        <option value="MR">Mauretanien</option>
+        <option value="MU">Mauritius</option>
+        <option value="MX">Mexiko</option>
+        <option value="FM">Mikronesien</option>
+        <option value="MD">Moldau</option>
+        <option value="MC">Monaco</option>
+        <option value="MN">Mongolei</option>
+        <option value="ME">Montenegro</option>
+        <option value="MZ">Mosambik</option>
+        <option value="MM">Myanmar</option>
+        <option value="NA">Namibia</option>
+        <option value="NR">Nauru</option>
+        <option value="NP">Nepal</option>
+        <option value="NZ">Neuseeland</option>
+        <option value="NI">Nicaragua</option>
+        <option value="NL">Niederlande</option>
+        <option value="">Niederländische Antillen</option>
+        <option value="NE">Niger</option>
+        <option value="NG">Nigeria</option>
+        <option value="KP">Nordkorea</option>
+        <option value="MK">Nordmazedonien</option>
+        <option value="">Nordzypern</option>
+        <option value="NO">Norwegen</option>
+      </select>
       
-          <label for="fname">Vorname</label>
-          <input type="text" id="fname" name="firstname" placeholder="Dein Vorname.." required>
-      
-          <label for="lname">Nachname</label>
-          <input type="text" id="lname" name="lastname" placeholder="Dein Nachname.." required>
-      
-          <label for="country">Land</label>
-          <select id="country" name="country">
-            <option value="Deutschland">Deutschland</option>
-            <option value="Schweiz">Schweiz</option>
-            <option value="Oestereich">Östereich</option>
-          </select>
-      
-          <label for="subject">Text</label>
-          <textarea id="subject" name="subject" placeholder="Screibe etwas.." style="height:200px" required></textarea>
-      
-          <input type="submit" value="Abschicken">
-      
-        </form>
-      </div>
+      <label for="subject">Text</label>
+      <textarea id="subject" name="subject" placeholder="Screibe etwas.." style="height:200px" required></textarea>
+
+      <input type="submit" value="Abschicken">
+
+    </form>
+  </div>
 </head>
 <style>
-    /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+  /* Style inputs with type="text", select elements and textareas */
+  input[type=text],
+  select,
+  textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid white;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+      /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
 
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #333;
+    padding: 20px;
+  }
 
-@import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
+  @import url('../Schriften/Ubuntu/Ubuntu-Regular.ttf');
 
   body {
     font-family: 'Ubuntu', sans-serif;
@@ -85,7 +251,28 @@ input[type=submit]:hover {
     width: 100%;
     height: 100%;
     border-width: 0;
-    
+    color: white;
+
   }
 </style>
+<div class="container">
+
+  <div class="newsletter">
+      <div class="newsletter-icon">
+          <img width="50px" height="50px" src="../Fotos/Brief.png">
+      </div>
+      <div class="newsletter-body">
+          <p>Abonniere</p>
+          <p>Unser Newsletter</p>
+      </div>
+
+      <div class="newsletter-form">
+          <input type="email" name="" id="" placeholder="Deine E-Mail">
+          <button type="submit">Abonniere</button>
+      </div>
+
+      <a href="#" class="newsletter-close-btn">Kein Interesse!</a>
+  </div>
+</div>
+
 </html>

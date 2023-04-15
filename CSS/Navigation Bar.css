@@ -1,27 +1,62 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #282828;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  width: 100%;
+  vertical-align: middle;
+  list-style-type: none;
+  margin: 0;
+  height: 60px;
+  max-height: 60px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+.special {
+  display: block;
+  height: 100%; 
+  min-height: 60px;
+  padding: 20px 16px;
+  background-color: #333;
+}
+
+.paddingwith {
+  padding: 20px 16px;
+}
+body {
+  padding-top: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  padding-top: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li a {
+  width: auto;
+  display: inline;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #282828;
+}
+
+.active {
+  display: block;
+  height: 100%; 
+  min-height: 60px;
+  padding: 20px 16px;
+  background-color: #04AA6D;
+}
+#CoinAppIcon {
+  width: auto;
+  height: 100%;
+}

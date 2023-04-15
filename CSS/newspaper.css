@@ -7,45 +7,49 @@
     box-sizing: border-box;
 }
 
-
 a{
     text-decoration: none;
 }
 
 .container{
+    position: fixed;
+    top: 100px;
+    left: calc(50% - 260px);
     display: flex;
+    box-shadow: 10px solid black;
+    z-index: 200;
     align-items: center;
     justify-content: center;
     margin: auto;
     width: 520px;
 }
 
-.container .newsletter-btn{
+/*.container .newsletter-btn{
     display: block;
     background: #333;
     color: #fff;
     align-items: center;
-    padding: 14px 32px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 12px;
     margin-right: 640px;
     margin-top: -49px;
     
-}
+}*/
 .container .newsletter-btn:hover{
     background: #282828;
 }
-.container .newsletter-btn.active{
+.container .newsletter-btn.active .body:after{
     display: none;
 }
 .container .newsletter{
     display: none;
-    background: #fff;
+    background: #333;
     padding: 40px 30px;
     border-radius: 12px;
     box-shadow: 0px 4px 16px #ffffff20;
     height: 360px;
+    
 }
 
 .container .newsletter.active{
@@ -53,7 +57,7 @@ a{
 }
 
 .newsletter .newsletter-icon{
-    background: #ff801e;
+    background: #04AA6D;
     display: inline-block;
     padding: 12px 15px;
     border-radius: 50%;
@@ -86,22 +90,14 @@ a{
     font-size: 64px;
     font-weight: 700;
     letter-spacing: -0.04em;
-    color: #161616;
-}
-
-.newsletter-body p:nth-child(2){
-    font-size: 28px;
-    font-weight: 500;
-    letter-spacing: -0.04em;
-    color: #282828;
+    color: #fff;
 }
 
 .newsletter-body p:last-child{
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: capitalize;
+    font-size: 28px;
+    font-weight: 500;
     letter-spacing: -0.04em;
-    color: #282828;
+    color: #fff;
 }
 
 .newsletter .newsletter-form{
@@ -119,7 +115,11 @@ a{
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     border-radius: 12px;
-    background: ebecf090;
+    background: #ebecf090;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    color: #282828;
 }
 
 .newsletter-form input:focus{
@@ -139,7 +139,7 @@ a{
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: -0.02em;
-    background: #ff801e;
+    background: #282828;
     color: #fff;
     cursor: pointer;
 }
@@ -159,5 +159,5 @@ a{
 }
 
 .newsletter a:hover{
-    color: #ff801e
+    color: #282828
 }

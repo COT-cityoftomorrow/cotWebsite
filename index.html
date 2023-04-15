@@ -1,76 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./CSS/Navigation Bar.css"
-    <link rel="stylesheet" href="./CSS/stye.css">
-    <link rel="stylesheet" href="./JavaScript/script.js"
-    <link rel="stylesheet" href="./JavaScript/newspaper.js"
-    <link rel="stylesheet" href="./CSS/newspaper.js"
-
-    <link rel="icon" type="image/x-icon" href="Fotos/Logo.png">
+    <link rel="stylesheet" href="./CSS/Navigation Bar.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <script defer src="../JavaScript/script.js"></script>
+    <script defer src="JavaScript/newspaper.js"></script>
+    <script defer src="JavaScript/darktheme.js"></script>
+    <link rel="stylesheet" href="/CSS/newspaper.css">
+    <link rel="icon" type="image/x-icon" href="/Fotos/Logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/darktheme.css">
     <title>AaseeCoin</title>
 </head>
+
 <body>
 
 
     <ul>
-        <li><a href="HTML/Login.html">Anmelden</a></li>
-        <li><a href="HTML/Contact.html">Kontakt</a></li>
-        <li><a href="HTML/Register.html">Regristrieren</a></li>
-        <li style="float:right"><a class="active" href="HTML/Impressum.html">Impressum</a></li>
-        <li style="float:right"> <a class="active" href="HTML/UeberUns.html">Über Uns</a></li>
-    </ul>   
- 
-        <div class="container">
-        <a href="#" class="newsletter-btn">News</a>
+        <li style="height:100%; vertical-align: middle;"><a style="height: 100%;" href="../index.html"><img
+                    style="padding: 0; height:100%;" src="../Fotos/AaseeCoinAppIcon.png" id="CoinAppIcon"></a>
+        </li>
+        <li class="paddingwith"><a href="HTML/Login.html">Anmelden</a></li>
+        <li class="paddingwith"><a href="HTML/Contact.html">Kontakt</a></li>
+        <li class="paddingwith"><a href="HTML/Register.html">Registrieren</a></li>
+        <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
+  <!--<li class="paddingwith"><span class="change" style=" color: white;">Light Mode</span></li>-->
+  <li style="float:right"> <a class="active" href="HTML/UeberUns.html">Über Uns</a></li>
+        <li style="float:right"> <a class="active" href="HTML/Impressum.html">Impressum</a></li>
+    </ul><br><br>
+
+    <div class="container">
 
         <div class="newsletter">
             <div class="newsletter-icon">
-            <img width="50px" height="50px" src="../Fotos/Brief.png">
+                <img width="50px" height="50px" src="../Fotos/Brief.png">
             </div>
             <div class="newsletter-body">
-                <p>Subscribe</p>
-                <p>To Our Newsletter</p>
+                <p>Abonniere</p>
+                <p>unseren Newsletter</p>
             </div>
 
             <div class="newsletter-form">
-                <input type="email" name="" id="" placeholder="Your Email" required>
-                <button type="submit">Subscribe</button>
+                <input type="email" name="" id="" placeholder="Deine E-Mail">
+                <button type="submit">Abonniere</button>
             </div>
 
-            <a href="#" class="newsletter-close-btn">X</a>
+            <a href="#" class="newsletter-close-btn">Kein Interesse!</a>
         </div>
     </div>
 
+    <!--<footer id="Footer">
+        <p>Author: Lonnie Schemann, Unandi Chipofya und Frederik Koch</p>
+        <li style="float:left"> <a class="active" id="ImpressumFooter" href="HTML/Impressum.html">Impressum</a></li>
+        <li style="float:right"> <a class="active" id="UeberUns" href="HTML/UeberUns.html">Das sind wir!</a></li> 
+    </footer>-->
 
-    <img src="./Fotos/AaseeCoinAppIcon.png" id="CoinAppIcon">
+    <style>
+        @import url('./Schriften/Ubuntu/Ubuntu-Regular.ttf');
 
-<style>
-    @import url('./Schriften/Ubuntu/Ubuntu-Regular.ttf');
-    body {
-        font-family: 'Ubuntu', sans-serif;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        border-width: 0;
-    }
-    html {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        border-width: 0;
-    }
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            border-width: 0;
+        }
 
-    #CoinAppIcon {
-        border-radius: 10;
-        width: 100%;
+        html {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            border-width: 0;
+        }
+
+        footer {
+            position: sticky;
+            bottom: 0;
+            text-align: center;
+            padding: 100px;
+            background-color: #04AA6D;
+            color: white;
+        }
 
 
 
-    }
-</style>
+        #Footer {
+            list-style: none;
+        }
+
+        #UeberUns {
+            list-style: none;
+        }
+    </style>
 </body>
+
 </html>
