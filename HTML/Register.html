@@ -10,6 +10,8 @@
 <script defer src="JavaScript/darktheme.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
+<!--<script defer src="JavaScript/darktheme.js"></script>-->
+
 
 <title>Registrieren</title>
 <ul>
@@ -20,7 +22,7 @@
   <li class="paddingwith"><a href="Contact.html">Kontakt</a></li>
   <li class="active"><a href="Register.html">Registrieren</a></li>
   <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
-  <li class="paddingwith"><span class="change" style=" color: white;">Light Mode</span></li>
+  <!--<li class="paddingwith"><span class="change" style=" color: white;">Light Mode</span></li>-->
   <li style="float:right"> <a class="active" href="UeberUns.html">Über Uns</a></li>
   <li style="float:right"> <a class="active" href="Impressum.html">Impressum</a></li>
 </ul><br><br>
@@ -142,8 +144,7 @@
     
 
     <label for="psw-repeat"><b>Passwort</b></label>
-    <input type="password" placeholder="Passwort Wiederholden" name="psw-repeat" id="psw-repeat" class="form-input password" required>
-    <i style="margin-left: 200px; margin-top: -15px; font-size: 30px;" class="bi bi-eye-slash" id="showPassword"></i>
+    <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat" class="form-input password" required>
 
     <label for="adress"><b>Adresse und Hausnummer</b></label>
     <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
@@ -179,7 +180,7 @@
       </div>
 
       <div class="newsletter-form">
-        <input type="email" name="" id="" placeholder="Deine E-Mail" required>
+        <input type="email" name="email" id="" placeholder="Deine E-Mail">
         <button type="submit">Abonniere</button>
       </div>
 
@@ -209,7 +210,7 @@
         if ($("#psw").val() == $("#psw-repeat").val()) {
           $.ajax({
             method: "POST",
-            url: "http://localhost:3000/createUser",
+            url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/createUser",
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify({
@@ -221,9 +222,8 @@
             }),
             success: (data) => {
               //$.cookie("token", data.token)
-              //$(document).attr("location", "../index.html");
-              console.log(data);
               localStorage.setItem("token", data.token);
+              $(document).attr("location", "../index.html");
             },
             error: (error) => {
               alert(error.responseJSON.error);
