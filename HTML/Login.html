@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="../CSS/newspaper.css">
 <script src=    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
 <script defer src="JavaScript/darktheme.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
 <link rel="stylesheet" href="../CSS/Navigation Bar.css">
 <ul>
@@ -46,10 +47,15 @@
     <label for="uname"><b>E-Mail</b></label><br><br>
     <input class="eingabefeld" type="text" placeholder="E-Mail eintragen" name="uname" id="email" required>
     <br><br><br>
-    <label for="psw"><b>Passwort</b></label><br><br>
-    <input class="eingabefeld" type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <br>
-    <button id="btnlogin" type="button">Login</button>
+
+    <label for="psw"><b>Password</b></label><br><br>
+    <input class="eingabefeld form-input password" type="password" placeholder="Enter Password" name="psw" class="form-input password" required>
+    <i style="margin-top: 230px; margin-right: 350px;font-size: 30px;" class="bi bi-eye-slash" id="showPassword"></i><label>
+
+    <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label><br>
+    <button id="btnlogin" type="submit">Login</button>
+
     <span id="pswforgotten" class="psw"><a href="passwortvergessen.html" style="text-decoration: none; color: white;" >Passwort vergessen?</a></span>
     <span id="Regristrierung" class="psw"><a href="Register.html" style="text-decoration: none; color: white;" >Kein Konto, Registrieren sie sich jetzt!</a></span>
   </form>
@@ -107,6 +113,17 @@
   margin-bottom: 55px;
 }
 
+#showPassword{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(296px) translateY(-26px);
+    color: var(--primary-color);
+}
+#showPassword:hover{
+    color: var(--active-color);
+}
+
 #Regristrierung {
   background-color: #04AA6D;
   border: none;
@@ -144,3 +161,21 @@
     }
   </style>
 </div>
+
+<script>
+  const togglePassword = document.querySelector("#showPassword"),
+      password = document.querySelector(".password");
+
+      togglePassword.addEventListener("click", function(){
+
+        //changing type of attribute from password to text
+
+        const type = password.getAttribute("type") ==="password" ? "text" : "password";
+        password.setAttribute("type",type);
+
+        //now toggle the icon
+
+        this.classList.toggle("bi-eye");
+
+      });
+</script>
