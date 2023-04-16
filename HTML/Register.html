@@ -7,7 +7,11 @@
 <link rel="stylesheet" href="../CSS/newspaper.css">
 <link rel="stylesheet" href="../CSS/newspaper.css">
 <script src=    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+<script defer src="JavaScript/darktheme.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
 <!--<script defer src="JavaScript/darktheme.js"></script>-->
+
 
 <title>Registrieren</title>
 <ul>
@@ -40,6 +44,17 @@
     border-width: 0;
 
   }
+
+#showPassword{
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+    transform: translateX(296px) translateY(-26px);
+    color: var(--primary-color);
+}
+#showPassword:hover{
+    color: var(--active-color);
+}
 
   /* Add padding to containers */
   .container {
@@ -124,10 +139,12 @@
     <input type="text" placeholder="Email eingeben" name="email" id="email" required>
 
     <label for="psw"><b>Passwort</b></label>
-    <input type="password" placeholder="Passwort eingeben" name="psw" id="psw" required>
+    <input type="password" placeholder="Passwort eingeben" name="psw" id="psw" class="form-input password" required>
+    <i style="margin-left: 200px; margin-top: -15px; font-size: 30px;" class="bi bi-eye-slash" id="showPassword"></i>
+    
 
-    <label for="psw-repeat"><b>Password Wiederholen</b></label>
-    <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat" required>
+    <label for="psw-repeat"><b>Passwort</b></label>
+    <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat" class="form-input password" required>
 
     <label for="adress"><b>Adresse und Hausnummer</b></label>
     <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
@@ -170,6 +187,23 @@
       <a href="#" class="newsletter-close-btn">Kein Interesse!</a>
     </div>
   </div>
+  <script>
+    const togglePassword = document.querySelector("#showPassword"),
+        password = document.querySelector(".password");
+  
+        togglePassword.addEventListener("click", function(){
+  
+          //changing type of attribute from password to text
+  
+          const type = password.getAttribute("type") ==="password" ? "text" : "password";
+          password.setAttribute("type",type);
+  
+          //now toggle the icon
+  
+          this.classList.toggle("bi-eye");
+  
+        });
+  </script>
   <script>
     $(document).ready(() => {
       $("#registerbtn").on("click", () => {
