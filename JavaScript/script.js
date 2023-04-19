@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log($(document).html());
     $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
     $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
     $("body").append("<div id='navidiv'></div>");
