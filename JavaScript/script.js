@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+    $("body").append("<div id='navidiv'></div>");
+    $("#navidiv").load("/HTML/Navi.html");
     var newsletterBtn = $(".newsletter-btn");
     var newsletterBtnClose = $(".newsletter-close-btn");
     var newsletter = $(".newsletter");
     var navidiv = $("#navidiv");
     var interaveltest = setInterval(() => {
-        $("body").append("<div id='navidiv'></div>");
-        $("#navidiv").load("/HTML/Navi.html");
         newsletterBtn = $(".newsletter-btn");
         newsletterBtnClose = $(".newsletter-close-btn");
         newsletter = $(".newsletter");
@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
             $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
             $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
             //event listener
-            newsletterBtn.addEventListener("click", modalOpen)
-            newsletterBtnClose.addEventListener("click", modalClose)
+            $(newsletterBtn).on("click", modalOpen)
+            $(newsletterBtnClose).on("click", modalClose)
 
             //function
 
