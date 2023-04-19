@@ -10,7 +10,7 @@ var interaveltest = setInterval(() => {
         newsletterBtnClose = $(".newsletter-close-btn");
         newsletter = $(".newsletter");
         navidiv = $("#navidiv");
-        if (newsletterBtn.length != 0 && newsletterBtn != null && newsletterBtnClose.length != 0 && newsletterBtnClose != null && $(newsletterBtn).parentElement != null) {
+        if (newsletterBtn.length != 0 && newsletterBtn != null && newsletterBtnClose.length != 0 && newsletterBtnClose != null && $(newsletterBtn).parents("li") != null) {
             clearInterval(interaveltest);
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
@@ -28,13 +28,13 @@ var interaveltest = setInterval(() => {
             function modalOpen() {
                 $(newsletter).addClass("active");
                 $(newsletterBtn).addClass("active");
-                $(newsletterBtn).parentElement.removeClass("paddingwith");
+                $(newsletterBtn).parents("li").removeClass("paddingwith");
             };
 
             function modalClose() {
                 $(newsletter).removeClass("active");
                 $(newsletterBtn).removeClass("active");
-                $(newsletterBtn).parentElement.addClass("paddingwith");
+                $(newsletterBtn).parents("li").addClass("paddingwith");
 
             };
             //modalOpen();
