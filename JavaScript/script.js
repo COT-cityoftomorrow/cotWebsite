@@ -1,4 +1,5 @@
 document.onload = () => {
+    console.log("Test");
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
     const newsletterBtn = document.querySelector(".newsletter-btn");
