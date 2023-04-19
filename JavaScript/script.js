@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
+    const newsletterBtn = $(".newsletter-btn");
+    const newsletterBtnClose = $(".newsletter-close-btn");
+    const newsletter = $(".newsletter");
+    const navidiv = $("#navidiv");
     if (newsletterBtn.length != 0) {
-        const newsletterBtn = $(".newsletter-btn");
-        const newsletterBtnClose = $(".newsletter-close-btn");
-        const newsletter = $(".newsletter");
-        const navidiv = $("#navidiv");
+        newsletterBtn = $(".newsletter-btn");
+        newsletterBtnClose = $(".newsletter-close-btn");
+        newsletter = $(".newsletter");
+        navidiv = $("#navidiv");
 
         $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
         $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
@@ -59,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     } else {
         setTimeout(() => {
-            const newsletterBtn = $(".newsletter-btn");
-            const newsletterBtnClose = $(".newsletter-close-btn");
-            const newsletter = $(".newsletter");
-            const navidiv = $("#navidiv");
+            newsletterBtn = $(".newsletter-btn");
+            newsletterBtnClose = $(".newsletter-close-btn");
+            newsletter = $(".newsletter");
+            navidiv = $("#navidiv");
             console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv })
         }, 5000)
     }
