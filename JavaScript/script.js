@@ -10,7 +10,7 @@ var interaveltest = setInterval(() => {
         newsletterBtnClose = $(".newsletter-close-btn");
         newsletter = $(".newsletter");
         navidiv = $("#navidiv");
-        if (newsletterBtn.length != 0 && newsletterBtn != null) {
+        if (newsletterBtn.length != 0 && newsletterBtn != null && newsletterBtnClose.length != 0 && newsletterBtnClose != null && $(newsletterBtn).parentElement != null) {
             clearInterval(interaveltest);
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
