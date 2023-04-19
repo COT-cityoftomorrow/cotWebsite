@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         })
     } else {
-        console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv })
+        setTimeout(() => {
+            console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv })
+        }, 1000)
     }
 });
