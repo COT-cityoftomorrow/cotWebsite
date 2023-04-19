@@ -5,14 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     var newsletterBtnClose = $(".newsletter-close-btn");
     var newsletter = $(".newsletter");
     var navidiv = $("#navidiv");
-    //var interaveltest = setInterval(() => {
+var interaveltest = setInterval(() => {
         newsletterBtn = $(".newsletter-btn");
         newsletterBtnClose = $(".newsletter-close-btn");
         newsletter = $(".newsletter");
         navidiv = $("#navidiv");
         if (newsletterBtn.length != 0 && newsletterBtn != null) {
             console.log(newsletterBtn);
-            console.log("test");
             clearInterval(interaveltest);
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
@@ -70,5 +69,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
             })
         }
-    //}, 1000);
+    }, 1000);
 });
