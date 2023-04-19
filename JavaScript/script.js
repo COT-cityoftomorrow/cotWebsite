@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var newsletterBtnClose = $(".newsletter-close-btn");
     var newsletter = $(".newsletter");
     var navidiv = $("#navidiv");
-    var interaveltest = setInterval(() => {
+    //var interaveltest = setInterval(() => {
         newsletterBtn = $(".newsletter-btn");
         newsletterBtnClose = $(".newsletter-close-btn");
         newsletter = $(".newsletter");
@@ -70,5 +70,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 })
             })
         }
-    }, 1000);
+    //}, 1000);
 });
