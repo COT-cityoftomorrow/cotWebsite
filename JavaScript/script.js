@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         newsletterBtnClose = $(".newsletter-close-btn");
         newsletter = $(".newsletter");
         navidiv = $("#navidiv");
-        if (newsletterBtn.length != 0) {
+        if (newsletterBtn.length != 0 && newsletterBtn != null) {
+            console.log(newsletterBtn);
             console.log("test");
             clearInterval(interaveltest);
             newsletterBtn = $(".newsletter-btn");
