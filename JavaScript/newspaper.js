@@ -1,7 +1,8 @@
 const newsletterBtn = document.querySelector(".newsletter-btn");
 const newsletterBtnClose = document.querySelector(".newsletter-close-btn");
 const newsletter = document.querySelector(".newsletter");
-$(document).append($("<div>").load("/HTML/Navi.html"));
+$(document).append("<div id='navidiv'></div>");
+$("#navidiv").load("/HTML/Navi.html");
 //event listener
 newsletterBtn.addEventListener("click", modalOpen)
 newsletterBtnClose.addEventListener("click", modalClose)
