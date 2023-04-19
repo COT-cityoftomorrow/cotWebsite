@@ -28,15 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
             //function
 
             function modalOpen() {
-                newsletter.addClass("active");
-                newsletterBtn.addClass("active");
-                newsletterBtn.parentElement.removeClass("paddingwith");
+                $(newsletter).addClass("active");
+                $(newsletterBtn).addClass("active");
+                $(newsletterBtn).parentElement.removeClass("paddingwith");
             };
 
             function modalClose() {
-                newsletter.removeClass("active");
-                newsletterBtn.removeClass("active");
-                newsletterBtn.parentElement.addClass("paddingwith");
+                $(newsletter).removeClass("active");
+                $(newsletterBtn).removeClass("active");
+                $(newsletterBtn).parentElement.addClass("paddingwith");
 
             };
             //modalOpen();
