@@ -1,4 +1,4 @@
-$(document).on("load", () => {
+document.onload = () => {
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
     const newsletterBtn = document.querySelector(".newsletter-btn");
@@ -54,4 +54,4 @@ $(document).on("load", () => {
             }
         })
     })
-});
+};
