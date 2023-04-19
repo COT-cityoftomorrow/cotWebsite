@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    setInterval(() => {
+    var interaveltest = setInterval(() => {
         $("body").append("<div id='navidiv'></div>");
         $("#navidiv").load("/HTML/Navi.html");
         var newsletterBtn = $(".newsletter-btn");
@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var newsletter = $(".newsletter");
         var navidiv = $("#navidiv");
         if (newsletterBtn.length != 0) {
+            clearInterval(interaveltest);
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
             newsletter = $(".newsletter");
