@@ -1,4 +1,4 @@
-document.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
     console.log("Test")
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
@@ -55,4 +55,4 @@ document.onload = () => {
             }
         })
     })
-};
+});
