@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log(window.location.pathname)
     $("a[href='" + window.location.pathname + "']").parents().addClass("active");
+    $("a[href='" + window.location.pathname + "']").parents().removeClass("paddingwith");
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
     const newsletterBtn = document.querySelector(".newsletter-btn");
