@@ -1,4 +1,4 @@
-document.addEventListener("load", () => {
+document.addEventListener("onload", () => {
     $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
     $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
     $("body").append("<div id='navidiv'></div>");
