@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
-    const newsletterBtn = document.querySelector(".newsletter-btn");
-    const newsletterBtnClose = document.querySelector(".newsletter-close-btn");
-    const newsletter = document.querySelector(".newsletter");
+    const newsletterBtn = $(".newsletter-btn");
+    const newsletterBtnClose = $(".newsletter-close-btn");
+    const newsletter = $(".newsletter");
     const navidiv = $("#navidiv");
     console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv})
     $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
