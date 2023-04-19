@@ -60,6 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         setTimeout(() => {
             console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv })
-        }, 1000)
+        }, 5000)
     }
 });
