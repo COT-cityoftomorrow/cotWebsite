@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log($("a[href='" + window.location.pathname + "']"))
-    $("a[href='" + window.location.pathname + "']").parents().addClass("active");
-    $("a[href='" + window.location.pathname + "']").parents().removeClass("paddingwith");
+    $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
+    $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
     const newsletterBtn = document.querySelector(".newsletter-btn");
