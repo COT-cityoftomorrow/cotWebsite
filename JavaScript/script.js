@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const navidiv = $("#navidiv");
     if (newsletterBtn.length != 0) {
 
-        console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv })
         $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
         $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
         //event listener
@@ -58,5 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
         })
+    } else {
+        console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv })
     }
 });
