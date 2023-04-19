@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
-    const newsletterBtn = $(".newsletter-btn");
-    const newsletterBtnClose = $(".newsletter-close-btn");
-    const newsletter = $(".newsletter");
-    const navidiv = $("#navidiv");
+    var newsletterBtn = $(".newsletter-btn");
+    var newsletterBtnClose = $(".newsletter-close-btn");
+    var newsletter = $(".newsletter");
+    var navidiv = $("#navidiv");
     if (newsletterBtn.length != 0) {
         newsletterBtn = $(".newsletter-btn");
         newsletterBtnClose = $(".newsletter-close-btn");
