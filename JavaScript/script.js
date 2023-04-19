@@ -1,9 +1,10 @@
-$("body").append("<div id='navidiv'></div>");
-$("#navidiv").load("/HTML/Navi.html");
-const newsletterBtn = document.querySelector(".newsletter-btn");
-const newsletterBtnClose = document.querySelector(".newsletter-close-btn");
-const newsletter = document.querySelector(".newsletter");
 document.addEventListener("DOMContentLoaded", () => {
+    $("body").append("<div id='navidiv'></div>");
+    $("#navidiv").load("/HTML/Navi.html");
+    const newsletterBtn = document.querySelector(".newsletter-btn");
+    const newsletterBtnClose = document.querySelector(".newsletter-close-btn");
+    const newsletter = document.querySelector(".newsletter");
+    console.log({ newsletterBtn, newsletterBtnClose, newsletter, $("#navidiv").html()})
     $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
     $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
     //event listener
