@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+    var newsletterBtn = $(".newsletter-btn");
+    var newsletterBtnClose = $(".newsletter-close-btn");
+    var newsletter = $(".newsletter");
+    var navidiv = $("#navidiv");
     var interaveltest = setInterval(() => {
         $("body").append("<div id='navidiv'></div>");
         $("#navidiv").load("/HTML/Navi.html");
-        var newsletterBtn = $(".newsletter-btn");
-        var newsletterBtnClose = $(".newsletter-close-btn");
-        var newsletter = $(".newsletter");
-        var navidiv = $("#navidiv");
+        newsletterBtn = $(".newsletter-btn");
+        newsletterBtnClose = $(".newsletter-close-btn");
+        newsletter = $(".newsletter");
+        navidiv = $("#navidiv");
         if (newsletterBtn.length != 0) {
+            console.log("test");
             clearInterval(interaveltest);
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
