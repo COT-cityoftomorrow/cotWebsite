@@ -68,14 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 })
             })
-        } else {
-            setTimeout(() => {
-                newsletterBtn = $(".newsletter-btn");
-                newsletterBtnClose = $(".newsletter-close-btn");
-                newsletter = $(".newsletter");
-                navidiv = $("#navidiv");
-                console.log({ newsletterBtn, newsletterBtnClose, newsletter, navidiv })
-            }, 5000)
         }
-    }, 100);
+    }, 1000);
 });
