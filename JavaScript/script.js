@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    while ($("a[href='" + window.location.pathname + "']").length == 0) {}
+    //while ($("a[href='" + window.location.pathname + "']").length == 0) {}
     $("a[href='" + window.location.pathname + "']").parents("li").addClass("active");
     $("a[href='" + window.location.pathname + "']").parents("li").removeClass("paddingwith");
     $("body").append("<div id='navidiv'></div>");
