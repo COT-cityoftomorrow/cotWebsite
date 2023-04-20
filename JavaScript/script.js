@@ -1,6 +1,6 @@
 var blurin = document.createElement("div");
 blurin.id = "blurin";
-blurin.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999; display: none; filter: blur(3)";
+blurin.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: transparent; z-index: 999; display: block; filter: blur(3)";
 var loading = document.createElement("img");
 loading.id = "loading";
 loading.src = "/Fotos/loading.gif";
@@ -22,7 +22,7 @@ var interaveltest = setInterval(() => {
         if (newsletterBtn.length != 0 && newsletterBtn != null && newsletterBtnClose.length != 0 && newsletterBtnClose != null && $(newsletterBtn).parents("li") != null) {
             clearInterval(interaveltest);
             document.getElementById("loading").remove();
-            //document.getElementById("blurin").remove();
+            document.getElementById("blurin").remove();
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
             newsletter = $(".newsletter");
