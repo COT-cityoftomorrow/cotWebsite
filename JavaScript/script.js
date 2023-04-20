@@ -1,9 +1,13 @@
+var blurin = document.createElement("div");
+blurin.id = "blurin";
+blurin.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999; display: none; filter: blur(3)";
 var loading = document.createElement("img");
 loading.id = "loading";
 loading.src = "/Fotos/loading.gif";
-loading.style = "height: 50px; width: 50px; background-color: black; position: fixed; top: calc(50% - 25px); left: calc(50% - 25px); z-index: 1000;";
+loading.style = "height: 200px; width: 200px; background-color: black; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px); z-index: 1000;";
 document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(loading);
+    document.body.appendChild(blurin);
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
     var newsletterBtn = $(".newsletter-btn");
@@ -18,6 +22,7 @@ var interaveltest = setInterval(() => {
         if (newsletterBtn.length != 0 && newsletterBtn != null && newsletterBtnClose.length != 0 && newsletterBtnClose != null && $(newsletterBtn).parents("li") != null) {
             clearInterval(interaveltest);
             document.getElementById("loading").remove();
+            document.getElementById("blurin").remove();
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
             newsletter = $(".newsletter");
