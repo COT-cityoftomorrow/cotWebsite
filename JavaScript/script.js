@@ -1,4 +1,4 @@
-var loading = document.createElement("src");
+var loading = document.createElement("img");
 loading.src = "/Fotos/loading.gif";
 loading.style = "height: 50px; width: 50px; background-color: black; position: fixed; top: calc(50%-25px); left: calc(50%-25px); z-index: 1000;";
 document.addEventListener("DOMContentLoaded", () => {
