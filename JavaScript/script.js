@@ -22,7 +22,7 @@ var interaveltest = setInterval(() => {
         if (newsletterBtn.length != 0 && newsletterBtn != null && newsletterBtnClose.length != 0 && newsletterBtnClose != null && $(newsletterBtn).parents("li") != null) {
             clearInterval(interaveltest);
             document.getElementById("loading").remove();
-            document.getElementById("blurin").remove();
+            //document.getElementById("blurin").remove();
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
             newsletter = $(".newsletter");
