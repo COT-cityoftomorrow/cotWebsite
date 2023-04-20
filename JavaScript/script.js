@@ -74,5 +74,5 @@ var interaveltest = setInterval(() => {
                 })
             })
         }
-    }, 1000);
+    }, 100);
 });
