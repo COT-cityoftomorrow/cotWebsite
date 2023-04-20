@@ -1,4 +1,5 @@
 var loading = document.createElement("img");
+loading.id = "loading";
 loading.src = "/Fotos/loading.gif";
 loading.style = "height: 50px; width: 50px; background-color: black; position: fixed; top: calc(50%-25px); left: calc(50%-25px); z-index: 1000;";
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,6 +17,7 @@ var interaveltest = setInterval(() => {
         navidiv = $("#navidiv");
         if (newsletterBtn.length != 0 && newsletterBtn != null && newsletterBtnClose.length != 0 && newsletterBtnClose != null && $(newsletterBtn).parents("li") != null) {
             clearInterval(interaveltest);
+            document.getElementById("loading").remove();
             newsletterBtn = $(".newsletter-btn");
             newsletterBtnClose = $(".newsletter-close-btn");
             newsletter = $(".newsletter");
