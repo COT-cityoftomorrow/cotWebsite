@@ -1,8 +1,8 @@
 var loading = document.createElement("src");
 loading.src = "/Fotos/loading.gif";
 loading.style = "height: 50px; width: 50px; background-color: black; position: fixed; top: calc(50%-25px); left: calc(50%-25px); z-index: 1000;";
-document.body.appendChild(loading);
 document.addEventListener("DOMContentLoaded", () => {
+    document.body.appendChild(loading);
     $("body").append("<div id='navidiv'></div>");
     $("#navidiv").load("/HTML/Navi.html");
     var newsletterBtn = $(".newsletter-btn");
