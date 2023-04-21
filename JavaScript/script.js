@@ -5,6 +5,7 @@ loading.style = "height: 200px; width: 200px; background-color: black; position:
 document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(loading);
     $("body").append("<div id='navidiv'></div>");
+    $("body").append("<div></div>").load("/HTML/newsletter.html");
     $("#navidiv").load("/HTML/Navi.html");
     //document.style = document.style + "body>*:not(#loading) {filter: blur(3em);}";
     var newsletterBtn = $(".newsletter-btn");
