@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(loading);
     $("body").append("<div id='navidiv'></div>");
     $("body").append("<div id='uebernewsletter'></div>");
-    $("uebernewsletter").load("/HTML/newsletter.html");
+    $("#uebernewsletter").load("/HTML/newsletter.html");
     $("#navidiv").load("/HTML/Navi.html");
     //document.style = document.style + "body>*:not(#loading) {filter: blur(3em);}";
     var newsletterBtn = $(".newsletter-btn");
