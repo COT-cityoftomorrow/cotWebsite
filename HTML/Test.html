@@ -1,52 +1,20 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800&family=Bellefair&display=swap"
+        rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
-<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
-            <div
-                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                    <li style="height:100%; vertical-align: middle;"><a style="height: 100%;" href="../index.html"><img
-                                style="padding: 0; height:100%;" src="/Fotos/Aaseecoin.png" id="CoinAppIcon"></a>
-                    </li>
-                    <li class="paddingwith"><a href="HTML/News.html">News</a></li>
-                    <li class="paddingwith"><a href="HTML/Login.html">Anmelden</a></li>
-                    <li class="paddingwith"><a href="HTML/Contact.html">Kontakt</a></li>
-                    <li class="paddingwith"><a href="HTML/Register.html">Registrieren</a></li>
-                    <li class="paddingwith"><a href="" class="newsletter-btn">Newsletter Anmeldung</a></li>
-                    <li class="paddingwith"><span class="change" style=" color: white;">Heller Modus</span></li>
-                    <li style="float:right"> <a class="active" href="HTML/UeberUns.html">Über Uns</a></li>
-                    <li style="float:right"> <a class="active" href="HTML/Impressum.html">Impressum</a></li>
-                </ul>
-            </div>
-            <div class="flex items-center gap-6">
-                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-            </div>
-    </header>
-
-
-
-    <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e) {
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
-        }
-    </script>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 
 </html>
