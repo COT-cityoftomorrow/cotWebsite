@@ -1,215 +1,217 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" href="../CSS/Navigation Bar.css">
-<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
-<script defer src="../JavaScript/newspaper.js"></script>
-<script src="/JavaScript/jquery-3.6.4.min.js"></script>
-<script src="/JavaScript/jquery.cookie.js"></script>
-<script src="/JavaScript/script.js"></script>
-<link rel="stylesheet" href="../CSS/newspaper.css">
-<link rel="stylesheet" href="../CSS/newspaper.css">
-<!--<script defer src="JavaScript/darktheme.js"></script>-->
-<title>Registrieren</title>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
+  <script defer src="../JavaScript/newspaper.js"></script>
+  <script src="/JavaScript/jquery-3.6.4.min.js"></script>
+  <script src="/JavaScript/jquery.cookie.js"></script>
+  <script src="/JavaScript/script.js"></script>
+  <link rel="stylesheet" href="../CSS/newspaper.css">
+  <link rel="stylesheet" href="../CSS/newspaper.css">
+  <!--<script defer src="JavaScript/darktheme.js"></script>-->
+  <title>Registrieren</title>
 </head>
+
 <body>
   <br><br>
 
 
 
 
-<style>
-  * {
-    box-sizing: border-box
-  }
+  <style>
+    @import url('./Schriften/Ubuntu/Ubuntu-Regular.ttf');
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      border-width: 0;
+    }
 
-  @import url('/Schriften/Ubuntu/Ubuntu-Regular.ttf')
+    #showPassword {
+      display: flex;
+      position: absolute;
+      cursor: pointer;
+      transform: translateX(296px) translateY(-26px);
+      color: var(--primary-color);
+    }
 
-  body {
-    font-family: 'Ubuntu', sans-serif;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    border-width: 0;
+    #showPassword:hover {
+      color: var(--active-color);
+    }
 
-  }
+    /* Add padding to containers */
+    .container {
+      display: block;
+      padding: 16px;
+    }
 
-#showPassword{
-    display: flex;
-    position: absolute;
-    cursor: pointer;
-    transform: translateX(296px) translateY(-26px);
-    color: var(--primary-color);
-}
-#showPassword:hover{
-    color: var(--active-color);
-}
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+      width: 80vw;
+      border: 1px solid #dedede;
+      padding: 10px 15px;
+      margin: 10px 0;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 16px;
+      border-radius: 12px;
+      background: ebecf090;
+    }
 
-  /* Add padding to containers */
-  .container {
-    display: block;
-    padding: 16px;
-  }
+    input[type=text]:focus,
+    input[type=password]:focus {
+      outline: 0;
+      border: 1px solid #2d2d2d50;
+    }
 
-  /* Full-width input fields */
-  input[type=text],
-  input[type=password] {
-    width: 80vw;
-    border: 1px solid #dedede;
-    padding: 10px 15px;
-    margin: 10px 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    border-radius: 12px;
-    background: ebecf090;
-  }
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
 
-  input[type=text]:focus,
-  input[type=password]:focus {
-    outline: 0;
-    border: 1px solid #2d2d2d50;
-  }
+    /* Set a style for the submit/register button */
+    #registerbtn {
+      display: flex;
+      background-color: #04AA6D;
+      color: white;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: auto;
+      padding: 20px 40px 20px 40px;
+      border-radius: 20px;
+      opacity: 0.9;
+      font-size: 20;
+    }
 
-  /* Overwrite default styles of hr */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
+    .registerbtn:hover {
+      opacity: 1;
+    }
 
-  /* Set a style for the submit/register button */
-  #registerbtn {
-    display: flex;
-    background-color: #04AA6D;
-    color: white;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: auto;
-    padding: 20px 40px 20px 40px;
-    border-radius: 20px;
-    opacity: 0.9;
-    font-size: 20;
-  }
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
 
-  .registerbtn:hover {
-    opacity: 1;
-  }
+    input {
+      width: 200px;
+    }
 
-  /* Add a blue text color to links */
-  a {
-    color: dodgerblue;
-  }
-  input {
-    width: 200px;
-  }
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+      display: flex;
+      background-color: #04AA6D;
+      color: white;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 200px;
+      padding: 10px 40px 10px 40px;
+      border-radius: 20px;
+      opacity: 0.9;
+    }
+  </style>
+  </head>
 
-  /* Set a grey background color and center the text of the "sign in" section */
-  .signin {
-    display: flex;
-    background-color: #04AA6D;
-    color: white;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 200px;
-    padding: 10px 40px 10px 40px;
-    border-radius: 20px;
-    opacity: 0.9;
-  }
-</style>
-</head>
-<body>
-<form action="action_page.php">
-  <div class="container">
-    <h1>Registrieren</h1>
-    <p>Bitte füllen sie alle Felder aus.</p>
-    <hr>
+  <body>
+    <form action="action_page.php">
+      <div class="container">
+        <h1>Registrieren</h1>
+        <p>Bitte füllen sie alle Felder aus.</p>
+        <hr>
 
-    <label for="username"><b>Name</b></label>
-    <input type="text" placeholder="Name eingeben" name="username" id="username" required>
+        <label for="username"><b>Name</b></label>
+        <input type="text" placeholder="Name eingeben" name="username" id="username" required>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Email eingeben" name="email" id="email" required>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Email eingeben" name="email" id="email" required>
 
-    <label for="psw"><b>Passwort</b></label>
-    <input type="password" placeholder="Passwort eingeben" name="psw" id="psw" class="form-input password" required>
-    <i style="margin-left: 200px; margin-top: -15px; font-size: 30px;" class="bi bi-eye-slash" id="showPassword"></i>
-    
+        <label for="psw"><b>Passwort</b></label>
+        <input type="password" placeholder="Passwort eingeben" name="psw" id="psw" class="form-input password" required>
+        <i style="margin-left: 200px; margin-top: -15px; font-size: 30px;" class="bi bi-eye-slash"
+          id="showPassword"></i>
 
-    <label for="psw-repeat"><b>Passwort</b></label>
-    <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat" class="form-input password" required>
 
-    <label for="adress"><b>Adresse und Hausnummer</b></label>
-    <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
+        <label for="psw-repeat"><b>Passwort</b></label>
+        <input type="password" placeholder="Passwort Wiederholen" name="psw-repeat" id="psw-repeat"
+          class="form-input password" required>
 
-    <label for="adress"><b>Postleitzahl und Stadt</b></label>
-    <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
-    <p>Mit dem Anlegen eines Kontos <a href="AGB.html">erklären Sie sich mit unseren Nutzungsbedingungen und dem
-        Datenschutz einverstanden.</a>.</p>
-    <div
-      style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
-      <button type="submit" id="registerbtn">Registrieren</button>
-    </div>
-    <hr>
-    <div
-      style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
-      <div class="signin">
-        <a style="width: auto; text-decoration: none; display: inline; color: white;" href="Login.html">
-          <p style="width: auto; display: inline; color: white;">Hast schon ein Konto <a
-              style="width: auto; display: inline; color: white;" href="Login.html">Anmelden</a>.</p>
-        </a>
+        <label for="adress"><b>Adresse und Hausnummer</b></label>
+        <input type="text" placeholder="Adresse und Hausnummer" name="adress" id="adress" required>
+
+        <label for="adress"><b>Postleitzahl und Stadt</b></label>
+        <input type="text" placeholder="Postleitzahl und Stadt" name="Postleitzahl" id="Postleitzahl" required>
+        <p>Mit dem Anlegen eines Kontos <a href="AGB.html">erklären Sie sich mit unseren Nutzungsbedingungen und dem
+            Datenschutz einverstanden.</a>.</p>
+        <div
+          style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
+          <button type="submit" id="registerbtn">Registrieren</button>
+        </div>
+        <hr>
+        <div
+          style="display: flex; width: 100%; align-items: center; justify-content: center; flex-direction: row; text-align: center;">
+          <div class="signin">
+            <a style="width: auto; text-decoration: none; display: inline; color: white;" href="Login.html">
+              <p style="width: auto; display: inline; color: white;">Hast schon ein Konto <a
+                  style="width: auto; display: inline; color: white;" href="Login.html">Anmelden</a>.</p>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <script>
-    const togglePassword = document.querySelector("#showPassword"),
-        password = document.querySelector(".password");
-  
-        togglePassword.addEventListener("click", function(){
-  
+      <script>
+        const togglePassword = document.querySelector("#showPassword"),
+          password = document.querySelector(".password");
+
+        togglePassword.addEventListener("click", function () {
+
           //changing type of attribute from password to text
-  
-          const type = password.getAttribute("type") ==="password" ? "text" : "password";
-          password.setAttribute("type",type);
-  
+
+          const type = password.getAttribute("type") === "password" ? "text" : "password";
+          password.setAttribute("type", type);
+
           //now toggle the icon
-  
+
           this.classList.toggle("bi-eye");
-  
+
         });
-  </script>
-  <script>
-    $(document).ready(() => {
-      $("#registerbtn").on("click", () => {
-        if ($("#psw").val() == $("#psw-repeat").val()) {
-          $.ajax({
-            method: "POST",
-            url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/createUser",
-            contentType: 'application/json',
-            dataType: 'json',
-            data: JSON.stringify({
-              email: $("#email").val(),
-              password: $("#psw").val(),
-              name: $("#username").val(),
-              adressStreet: $("#adress").val(),
-              adressPlace: $("#Postleitzahl").val()
-            }),
-            success: (data) => {
-              //$.cookie("token", data.token)
-              localStorage.setItem("token", data.token);
-              $(document).attr("location", "../index.html");
-            },
-            error: (error) => {
-              alert(error.responseJSON.error);
+      </script>
+      <script>
+        $(document).ready(() => {
+          $("#registerbtn").on("click", () => {
+            if ($("#psw").val() == $("#psw-repeat").val()) {
+              $.ajax({
+                method: "POST",
+                url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/createUser",
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify({
+                  email: $("#email").val(),
+                  password: $("#psw").val(),
+                  name: $("#username").val(),
+                  adressStreet: $("#adress").val(),
+                  adressPlace: $("#Postleitzahl").val()
+                }),
+                success: (data) => {
+                  //$.cookie("token", data.token)
+                  localStorage.setItem("token", data.token);
+                  $(document).attr("location", "../index.html");
+                },
+                error: (error) => {
+                  alert(error.responseJSON.error);
+                }
+              })
+            } else {
+              alert("Deine Passwörter stimmen nicht überein!");
             }
           })
-        } else {
-          alert("Deine Passwörter stimmen nicht überein!");
-        }
-      })
-    })
-  </script>
-</form>
+        })
+      </script>
+    </form>
 
-</body>
+  </body>
+
 </html>
