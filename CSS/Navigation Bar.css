@@ -58,7 +58,7 @@ li a:hover:not(.active) {
   padding: 20px 16px;
   background-color: #04AA6D;
 }
-.active [href="/index.html"] {
+.active a[href="/index.html"] {
   display: block;
   height: 100%; 
   min-height: 60px;
