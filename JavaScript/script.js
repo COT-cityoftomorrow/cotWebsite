@@ -75,7 +75,7 @@ var interaveltest = setInterval(() => {
                     }
                 })
             })
-            $( ".change" ).on("click", function() {
+            /*$( ".change" ).on("click", function() {
                 if( $( "body" ).hasClass( "dark" )) {
                     $( "body" ).removeClass( "dark" );
                     $( ".change" ).text( "Light Mode" );
@@ -83,7 +83,7 @@ var interaveltest = setInterval(() => {
                     $( "body" ).addClass( "dark" );
                     $( ".change" ).text( "Dark Mode" );
                 }
-            });
+            }); Funktioniert nicht*/
         }
     }, 100);
 });
