@@ -46,11 +46,6 @@ li a {
   text-align: center;
   text-decoration: none;
 }
-
-li a:hover:not(.active) {
-  background-color: #282828;
-}
-
 .active {
   display: block;
   height: 100%; 
