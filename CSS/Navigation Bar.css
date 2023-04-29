@@ -59,6 +59,7 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 .active,li + a[href="/index.html"] {
+  padding: 0;
   background-color: #04AA6D;
 }
 .active a[href="/index.html"] {
