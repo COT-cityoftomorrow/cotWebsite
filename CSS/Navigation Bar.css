@@ -59,10 +59,6 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 .active a[href="/index.html"] {
-  display: block;
-  height: 100%; 
-  min-height: 60px;
-  max-height: 70px;
   background-color: #04AA6D;
 }
 #CoinAppIcon {
