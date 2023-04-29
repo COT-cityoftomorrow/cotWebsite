@@ -53,7 +53,7 @@ li a {
   padding: 20px 16px;
   background-color: #04AA6D;
 }
-.active,li + a[href="/index.html"] {
+.active:has(a[href="/index.html"]) {
   padding: 0;
   background-color: #04AA6D;
 }
