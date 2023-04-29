@@ -59,7 +59,6 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 .active li[href="/index.html"] {
-  padding: 20px 16px;
   background-color: #04AA6D;
 }
 #CoinAppIcon {
