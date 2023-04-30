@@ -9,7 +9,7 @@ body {
 
 .change {
     cursor: pointer;
-    border: 1px solid #282828;
+    border: 1px solid;
     border-radius: 40%;
     width: 20px;
     text-align: center;
