@@ -1,3 +1,10 @@
+
+
+
+// Diese Datei ist das Hauptstück der Website. Bitte NUR mit Absprache mit Lonnie bearbeiten!!!!!
+
+
+
 var loading = document.createElement("img");
 loading.id = "loading";
 loading.src = "/Fotos/loading.gif";
@@ -75,7 +82,8 @@ var interaveltest = setInterval(() => {
                     }
                 })
             })
-            $( ".change" ).on("click", function() {
+            
+            /*$( ".change" ).on("click", function() {
                 if( $( "body" ).hasClass( "dark" )) {
                     $( "body" ).removeClass( "dark" );
                     $( ".change" ).text( "Light Mode" );
@@ -83,7 +91,7 @@ var interaveltest = setInterval(() => {
                     $( "body" ).addClass( "dark" );
                     $( ".change" ).text( "Dark Mode" );
                 }
-            });
+            }); Funktioniert nicht*/
         }
     }, 100);
 });
