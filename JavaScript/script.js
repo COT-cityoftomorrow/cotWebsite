@@ -82,7 +82,27 @@ var interaveltest = setInterval(() => {
                     }
                 })
             })
-            
+            $("#contact-submit").on("click", () => {
+                $.ajax({
+                    method: "POST",
+                    url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/kontakt",
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        Vorname: $("#contact-fname").val(),
+                        Nachname: $("#contact-lname").val(),
+                        Email: $("#contact-email").val(),
+                        Nachricht: $("#contact-subject").val(),
+                    }),
+                    success: (data) => {
+                        alert(data.message);
+                    },
+                    error: (error) => {
+                        alert(error.responseJSON.error);
+                    }
+                })
+            })
+                
             /*$( ".change" ).on("click", function() {
                 if( $( "body" ).hasClass( "dark" )) {
                     $( "body" ).removeClass( "dark" );

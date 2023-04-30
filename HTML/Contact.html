@@ -20,23 +20,22 @@
     content="width=device-width, initial-scale=1.0">
 <br><br>
 
-  <!--BITTE BEACHTEN: Tesst -->
   <div class="container">
     <form action="action_page.php">
 
       <label for="fname">Vorname</label>
-      <input type="text" id="fname" name="firstname" placeholder="Dein Vorname.." required>
+      <input type="text" id="contact-fname" name="firstname" placeholder="Dein Vorname.." required>
 
       <label for="lname">Nachname</label>
-      <input type="text" id="lname" name="lastname" placeholder="Dein Nachname.." required>
+      <input type="text" id="contact-lname" name="lastname" placeholder="Dein Nachname.." required>
 
       <label for="lname">Email</label>
-      <input class="email" type="email" id="email" name="email" placeholder="Deine Email.." required>
+      <input class="email" type="email" id="contact-email" name="email" placeholder="Deine Email.." required>
 
       <label for="subject">Text</label>
-      <textarea id="subject" name="subject" placeholder="Schreibe etwas.." style="height:200px" required></textarea>
+      <textarea id="contact-subject" name="subject" placeholder="Schreibe etwas.." style="height:200px" required></textarea>
 
-      <input type="submit" value="Abschicken">
+      <input id="contact-submit" type="submit" value="Abschicken">
 
     </form>
   </div>
