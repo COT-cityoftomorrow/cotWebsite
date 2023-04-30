@@ -9,7 +9,7 @@ a{
     text-decoration: none;
 }
 
-.container{
+.containernewsletter{
     position: fixed;
     top: 100px;
     left: calc(50% - 260px);
@@ -22,7 +22,7 @@ a{
     width: 520px;
 }
 
-/*.container .newsletter-btn{
+/*.containernewsletter .newsletter-btn{
     display: block;
     background: #333;
     color: #fff;
@@ -34,13 +34,13 @@ a{
     margin-top: -49px;
     
 }*/
-.container .newsletter-btn:hover{
+.containernewsletter .newsletter-btn:hover{
     background: #282828;
 }
-.container .newsletter-btn.active .body:after{
+.containernewsletter .newsletter-btn.active .body:after{
     display: none;
 }
-.container .newsletter{
+.containernewsletter .newsletter{
     display: none;
     background: #333;
     padding: 40px 30px;
@@ -50,7 +50,7 @@ a{
     
 }
 
-.container .newsletter.active{
+.containernewsletter .newsletter.active{
     display: block;
 }
 
