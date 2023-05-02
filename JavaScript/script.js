@@ -59,7 +59,7 @@ var interaveltest = setInterval(() => {
             }, 60000)
             if (localStorage.getItem("token") != undefined && localStorage.getItem("token") != "" && localStorage.getItem("token") != null) {
                 $("a[href='HTML/Login.html']").parent("li").css("display", "none");
-                $("a[href='../HTML/Login.html']").parent("li").css("display", "none");
+                $("a[href='../HTML/Login.html']").paren("li").css("display", "none");
                 $("a[href='Login.html']").parent("li").css("display", "none");
                 $("a[href='HTML/Register.html']").parent("li").css("display", "none");
                 $("a[href='../HTML/Register.html']").parent("li").css("display", "none");
@@ -76,6 +76,7 @@ var interaveltest = setInterval(() => {
                     }),
                     success: (data) => {
                         alert(data.message);
+                        modalClose();
                     },
                     error: (error) => {
                         alert(error.responseJSON.error);
@@ -96,6 +97,7 @@ var interaveltest = setInterval(() => {
                     }),
                     success: (data) => {
                         alert(data.message);
+                        $("#contact-submit-form").html("<h1>Vielen Dank für Ihre Nachricht</h1><p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p><p>Mit freundlichen Grüßen</p><p>Ihr Aaseecoin Team</p>")
                     },
                     error: (error) => {
                         alert(error.responseJSON.error);
