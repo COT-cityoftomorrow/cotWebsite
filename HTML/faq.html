@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CSS/Navigation Bar.css">
+    <link rel="stylesheet" href="/CSS/index.css">
+    <script src="/JavaScript/jquery-3.6.4.min.js"></script>
+    <script src="/JavaScript/jquery.cookie.js"></script>
+    <script src="/JavaScript/script.js"></script>
+    <script src="/JavaScript/newspaper.js"></script>
+    <link rel="stylesheet" href="/CSS/newspaper.css">
+    <link rel="icon" type="image/x-icon" href="/Fotos/AaseeCoinAppIcon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/darktheme.css">
+    <title>FAQ</title>
+</head>
+<body>
+    <div style="width: 100%; text-align: center; font-size: 100px;">FAQ</div>
+    <div id="faqFragen" style="margin-top: 50px; display: flex; flex-direction: column; column-gap: 20px;">
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Wann habt ihr euch gegründet?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                <br><br>
+                Wir 4 haben uns am 13.04.2023 als Gruppe zusammengeschlossen um COT und den Aaseecoin zu starten.</div>
+        </div>
+    </div>
+    <script>
+        $(".ausklappenFaqFrage").click(function() {
+            if ($(this).parent(".faqFrage").children(".faqFrageText").css("display") == "block") {
+                $(this).parent(".faqFrage").children(".faqFrageText").css("display", "none");
+            } else {
+                $(this).parent(".faqFrage").children(".faqFrageText").css("display", "block");
+            }
+        });
+    </script>
+    <style>
+        .faqFrage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .ausklappenFaqFrage {
+            transform: rotate(0deg);
+            transition: transform 0.5s;
+        }
+        .faqFrageFrage {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .faqFrageText {
+            display: none;
+            font-size: 20px;
+        }
+    </style>
+</body>
+</html>

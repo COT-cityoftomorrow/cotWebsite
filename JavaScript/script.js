@@ -1,3 +1,10 @@
+
+
+
+// Diese Datei ist das Hauptstück der Website. Bitte NUR mit Absprache mit Lonnie bearbeiten!!!!!
+
+
+
 var loading = document.createElement("img");
 loading.id = "loading";
 loading.src = "/Fotos/loading.gif";
@@ -52,7 +59,7 @@ var interaveltest = setInterval(() => {
             }, 60000)
             if (localStorage.getItem("token") != undefined && localStorage.getItem("token") != "" && localStorage.getItem("token") != null) {
                 $("a[href='HTML/Login.html']").parent("li").css("display", "none");
-                $("a[href='../HTML/Login.html']").parent("li").css("display", "none");
+                $("a[href='../HTML/Login.html']").paren("li").css("display", "none");
                 $("a[href='Login.html']").parent("li").css("display", "none");
                 $("a[href='HTML/Register.html']").parent("li").css("display", "none");
                 $("a[href='../HTML/Register.html']").parent("li").css("display", "none");
@@ -69,13 +76,36 @@ var interaveltest = setInterval(() => {
                     }),
                     success: (data) => {
                         alert(data.message);
+                        modalClose();
                     },
                     error: (error) => {
                         alert(error.responseJSON.error);
                     }
                 })
             })
-            $( ".change" ).on("click", function() {
+            $("#contact-submit").on("click", () => {
+                $.ajax({
+                    method: "POST",
+                    url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/kontakt",
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        Vorname: $("#contact-fname").val(),
+                        Nachname: $("#contact-lname").val(),
+                        Email: $("#contact-email").val(),
+                        Nachricht: $("#contact-subject").val(),
+                    }),
+                    success: (data) => {
+                        alert(data.message);
+                        $("#contact-submit-form").html("<h1>Vielen Dank für Ihre Nachricht</h1><br><br><br><br><br><br><p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p><br><br><br><br><p>Mit freundlichen Grüßen</p><br><br><p>Ihr Aaseecoin Team</p>")
+                    },
+                    error: (error) => {
+                        alert(error.responseJSON.error);
+                    }
+                })
+            })
+                
+            /*$( ".change" ).on("click", function() {
                 if( $( "body" ).hasClass( "dark" )) {
                     $( "body" ).removeClass( "dark" );
                     $( ".change" ).text( "Light Mode" );
@@ -83,7 +113,7 @@ var interaveltest = setInterval(() => {
                     $( "body" ).addClass( "dark" );
                     $( ".change" ).text( "Dark Mode" );
                 }
-            });
+            }); Funktioniert nicht*/
         }
     }, 100);
 });
