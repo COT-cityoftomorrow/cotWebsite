@@ -83,10 +83,10 @@
             if ($(this).parent(".faqFrage").children(".faqFrageText").css("display") == "block") {
                 $(this).parent(".faqFrage").children(".faqFrageText").css("display", "none");
                 console.log("?")
-                $(this).css("rotate", "0deg");
+                $(this).css("transform", "rotate(0deg)");
             } else {
                 console.log("?")
-                $(this).css("rotate", "180deg");
+                $(this).css("transform", "rotate(180deg)");
             }
         });
     </script>
