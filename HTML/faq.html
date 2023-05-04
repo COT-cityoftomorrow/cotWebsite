@@ -80,10 +80,10 @@
 
     <script>
         $(".ausklappenFaqFrage").click(function () {
+            $(this).css("transform", "rotate(0deg)");
             if ($(this).parent(".faqFrage").children(".faqFrageText").css("display") == "block") {
                 console.log($(this).parent(".faqFrage"))
                 $(this).parent(".faqFrage").children(".faqFrageText").css("display", "none");
-                $(this).css("transform", "rotate(-0deg)");
             } else {
                 $(this).css("transform", "rotate(180deg)");
             }
