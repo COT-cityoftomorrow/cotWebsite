@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/CSS/Navigation Bar.css">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="/CSS/darktheme.css">
     <title>FAQ</title>
 </head>
+
 <body>
     <div style="width: 100%; text-align: center; font-size: 100px;">FAQ</div>
     <div id="faqFragen" style="margin-top: 50px; display: flex; flex-direction: column; column-gap: 20px;">
@@ -21,12 +23,63 @@
             <div class="faqFrageFrage">Wann habt ihr euch gegründet?</div>
             <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
             <div class="faqFrageText">
-                <br><br>
-                Wir 4 haben uns am 13.04.2023 als Gruppe zusammengeschlossen um COT und den Aaseecoin zu starten.</div>
+                Wir 4 haben uns am 13.04.2023 als Gruppe zusammengeschlossen um COT und den Aaseecoin zu starten.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Verdient ihr Geld mit COT?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Ganz klar: Nein, tun wir nicht. Wir verlieren eher Geld, denn wir stecken (wenn auch nicht viel) selber
+                Geld in COT um zum Beispiel den Server zu bezahlen. Auch Spenden dürfen/können wir aktuell nicht
+                annehmen.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Seid ihr noch Minderjährig?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Ja, sind wir. Wir sind alle zwischen 11 und 13 Jahren alt, aber wir wollten uns darin nicht hindern
+                lassen unsere Projekte umzusetzen.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Kann man euch etwas spenden?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Nein, kann man aktuell leider nicht. Wir sind erst noch dabei das rechtlich zu prüfen.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Was seid ihr? Also Unternehmen/Verein/(Gemeinnützige) Organisation?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Gar nichts. Das klingt jetzt erstmal komisch, aber wir sind tatsächlich nichts davon. Aktuell sind wir
+                nur eine Gruppe von 4 Personen, die sich zusammengetan haben um COT zu starten und unsere Projekte
+                umzusetzen. Man könnte uns als Zusammenschluss bezeichen, aber wir sind auch gerade dabei, zu Prüfen,
+                welche Form zu uns und unser(en) Projekt(en) passt. Vielleicht gründen wir einen Verein (Und: Ja,
+                Minderjährige können einen Verein grünen.), aber das ist noch nicht sicher. Wir werden euch auf dem
+                Laufenden halten.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Wie viele Projekte habt ihr am Laufen?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Aktuell nur eins, wir wurden ja auch erst gerade gegründet... Unser erstes und aktuell einziges Projekt ist der Aaseecoin.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Welcher Name steht für was? COT, Aaseecoin,...?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                COT steht für <b>C</b>ity <b>o</b>f <b>T</b>omorrow, also die Stadt von Morgen. COT ist der Name unserer Gruppe, die verschiedene Projekte umsetzt (aktuell eins), die dazu beitragen Münster zu verbessern, lebensfreundlicher zu gestalten und eine Stadt von Morgen zu werden. Der Aaseecoin unser aktuelles Projekt, eine lokale Währung für Münster, wie es sie auch schon in anderen Städten gibt (z.B. das Chiemgauer Regiogeld: <a href="https://www.chiemgauer.info/">https://www.chiemgauer.info/</a>). Bei Fragen zu den Namen oder zu etwas anderem, schreibt uns gerne über unser <a href="https://www.cityoftomorrow.de/html/contact">Kontaktformular</a> oder per E-Mail an: 
+            </div>
         </div>
     </div>
+
     <script>
-        $(".ausklappenFaqFrage").click(function() {
+        $(".ausklappenFaqFrage").click(function () {
             if ($(this).parent(".faqFrage").children(".faqFrageText").css("display") == "block") {
                 $(this).parent(".faqFrage").children(".faqFrageText").css("display", "none");
             } else {
@@ -45,18 +98,26 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
         .ausklappenFaqFrage {
             transform: rotate(0deg);
             transition: transform 0.5s;
         }
+
         .faqFrageFrage {
             font-size: 30px;
             font-weight: bold;
         }
+
         .faqFrageText {
+            padding-top: 40px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 10px;
             display: none;
             font-size: 20px;
         }
     </style>
 </body>
+
 </html>
