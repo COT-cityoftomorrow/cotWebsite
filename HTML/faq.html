@@ -82,9 +82,9 @@
         $(".ausklappenFaqFrage").click(function () {
             if ($(this).parent(".faqFrage").children(".faqFrageText").css("display") == "block") {
                 $(this).parent(".faqFrage").children(".faqFrageText").css("display", "none");
-                $(this).parent(".faqFrage").children(".faqFrageText").css("rotate", "0");
+                $(this).css("rotate", "0deg");
             } else {
-                $(this).parent(".faqFrage").children(".faqFrageText").css("rotate", "90");
+                $(this).css("rotate", "180deg");
             }
         });
     </script>
