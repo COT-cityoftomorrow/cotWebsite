@@ -1,3 +1,20 @@
+.projekteausklappen {
+  display: none;
+  flex-direction: column;
+  row-gap: 0px;
+  background-color: #333;
+  color: white;
+}
+.projekteausklappen a {
+  flex-direction: column;
+  row-gap: 0px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+.overprojekteausklappen:hover .projekteausklappen {
+  display: flex;
+}
 ul {
   position: fixed;
   top: 0;
