@@ -48,7 +48,7 @@ ul {
 li:has(div[class="projekteausklappen"]) {
   min-width: 200px;
 }
-li:has(.active) > div[class="projekteausklappen"] {
+.active:has(.projekteausklappen) > .projekteausklappen{
   margin-top: 20px;
 }
 li {
