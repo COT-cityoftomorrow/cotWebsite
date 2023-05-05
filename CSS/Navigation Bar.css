@@ -48,6 +48,9 @@ ul {
 li:has(div[class="projekteausklappen"]) {
   min-width: 200px;
 }
+li:has(a[class="overprojekteausklappen active"]) {
+  margin-top: 20px;
+}
 li {
   text-align: center;
   float: left;
