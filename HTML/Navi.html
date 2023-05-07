@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <ul>
     <li style="height:100%; vertical-align: middle;"><a style="height: 100%;" href="/index.html"><img
                 style="padding: 0; height:100%;" src="/Fotos/CotLogoTransparent.png" id="CoinAppIcon"></a>
@@ -15,4 +17,12 @@
     <li class="paddingwith" style="float:right"> <a href="/html/ueberuns">Über Uns</a></li>
     <li class="paddingwith" style="float:right"> <a href="/html/impressum">Impressum</a></li>
 </ul>
-
+<script>
+    $(".overprojekteausklappen").click(function () {
+        if ($(this).parent("li").children(".projekteausklappen").css("display") == "flex") {
+            $(this).parent("li").children(".projekteausklappen").css("display", "none");
+        } else {
+            $(this).parent("li").children(".projekteausklappen").css("display", "flex");
+        }
+    });
+</script>
