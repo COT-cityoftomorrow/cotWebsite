@@ -13,11 +13,124 @@
     <link rel="icon" type="image/x-icon" href="/Fotos/AaseeCoinAppIcon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/darktheme.css">
-    <title>FAQ</title>
+    <title>AaseeCoin von COT</title>
 </head>
 
 <body>
+    <div style="width: 100%; font-size: 50px; text-align: center;">Aaseecoin</div>
+    <br><br>
+    <div style="width: 100%; padding-left: 20%; padding-right: 20%; font-size: 25px; text-align: center;">Der Aaseecoin
+        ist unser
+        aktuelles und erstes Projekt, eine lokale Währung für Münster, wie es sie auch schon in anderen Städten gibt
+        (z.B. das Chiemgauer Regiogeld: <a href="https://www.chiemgauer.info/">https://www.chiemgauer.info/</a>).
+    </div>
+    <div id="faqFragen"
+        style="margin-top: 50px; display: flex; flex-direction: column; width: 100%; align-items: center; row-gap: 20px;">
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Wozu ist der Aaseecoin gut?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Der Aaseecoin ist eine Lokale Währung oder auch Regionalwährung genannt. <a
+                    href="https://de.wikipedia.org/wiki/Regionalw%C3%A4hrung">Regionalwährung
+                    Wikipediaartikel</a> lokale Währung stärkt die lokale Wirtschaft, dadurch, dass die Einkäufe
+                mit der Währung lokal getätigt werden und weniger importiert wird. Durch weniger Importe wird
+                CO2 gespart, da die Importe meist über Auto oder Flug erfolgen. Außerdem wird Münster dadurch
+                weniger abhängig von nicht in Münster ansässigen Firmen.</div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Was ist mit dem Umtauschen von Geld in die Währung?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Bei dem Umtausch von Euro in Aaseecoin ist ein Wechselkurs von 1:1. Beim Umtausch von Aaseecoin
+                in Euro ist eine andere Umtauschrate.Dort erhält man 95% des Betrags, d.h. wenn man 100
+                Aaseecoin in Euro umtauschen möchte erhält man 95€. Von diesen 5% werden 4% gespendet und 1%
+                wird genutzt um unsere Kosten zu decken.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Die 4% von jedem Umtausch, die gespendet werden, wohin werden die gespendet?
+            </div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Das steht jetzt noch nicht fest...
+                Wenn Sie einen Vorschlag haben, schreiben Sie uns gerne an: <a
+                    href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a>
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Gibt es den Aaseecoin schon?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Nein, wir sind noch in der Vorbereitungsphase, melde dich aber gerne zu unserem COT-Newsletter an, um
+                auf dem Laufenden zu bleiben. Das kannst du über die Navigationsleiste oben mit dem Button "Newsletter
+                Anmeldung" machen.
+            </div>
+        </div>
+        <div class="faqFrage">
+            <div class="faqFrageFrage">Wie kann man als Geschäft mitmachen?</div>
+            <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
+            <div class="faqFrageText">
+                Um als Geschäft mitzumachen, gibt es 2 Bedingungen:
+                1. Das Geschäft wurde in Münster gegründet.
+                2. Das Geschäft existiert nur in Münster und nicht in anderen Städten.
+                Wir werden viele lokale Geschäfte aus Münster anschreiben, wenn Sie aber ein Geschäft besitzen oder kennen, schreiben Sie uns gerne an: <a
+                href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".ausklappenFaqFrage").click(function () {
+            if ($(this).parent(".faqFrage").children(".faqFrageText").css("display") == "flex") {
+                $(this).css("transform", "rotate(0deg)");
+                $(this).parent(".faqFrage").children(".faqFrageText").css("display", "none");
+            } else {
+                $(this).parent(".faqFrage").children(".faqFrageText").css("display", "flex");
+                $(this).css("transform", "rotate(180deg)");
+            }
+        });
+    </script>
+    <style>
+        .faqFrage {
+            margin-bottom: 30px;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
 
+        .ausklappenFaqFrage {
+            transform: rotate(0deg);
+            transition: transform 0.5s;
+        }
+
+        .faqFrageFrage {
+            word-break: break-all;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-width: 500px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .faqFrageText {
+            max-width: 700px;
+            width: 100%;
+            padding-top: 40px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            display: none;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 20px;
+        }
+    </style>
 </body>
 
 </html>

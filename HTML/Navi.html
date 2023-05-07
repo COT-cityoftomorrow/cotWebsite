@@ -15,4 +15,12 @@
     <li class="paddingwith" style="float:right"> <a href="/html/ueberuns">Über Uns</a></li>
     <li class="paddingwith" style="float:right"> <a href="/html/impressum">Impressum</a></li>
 </ul>
-
+<script>
+    $(".overprojekteausklappen").click(function () {
+        if ($(this).parent("li").children(".projekteausklappen").css("display") == "flex") {
+            $(this).parent("li").children(".projekteausklappen").css("display", "none");
+        } else {
+            $(this).parent("li").children(".projekteausklappen").css("display", "flex");
+        }
+    });
+</script>
