@@ -9,17 +9,79 @@ a{
     text-decoration: none;
 }
 
-.containernewsletter{
-    position: fixed;
-    top: 100px;
-    left: calc(50% - 260px);
-    display: flex;
-    box-shadow: 10px solid black;
-    z-index: 200;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 520px;
+
+@media (max-width: 556px) {
+    .containernewsletter{
+        display: flex;
+        width: 100%;
+        padding: 0;
+        box-sizing: inherit;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        box-shadow: 10px solid black;
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .newsletter .newsletter-icon{
+        background: #04AA6D;
+        display: inline-block;
+        padding: 12px 15px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        display: inline-block;
+        align-self: center;
+        margin-left: calc(50% - 40px);
+        transform: translate(0px, -80px);
+        margin-bottom: 0;
+    }
+    .newsletter-body, .newsletter-form {
+        transform: translate(0px, -90px);
+    }
+    .newsletter-form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .newsletter-close-btn {
+        margin-top: 0;
+        transform: translate(0px, -110px);
+    }
+}
+@media (max-width: 450px) {
+    input[placeholder="Deine E-Mail"]:focus, .input[placeholder="Deine E-Mail"]:active {
+        transform: translate(0px, -200px);
+        background-color: white;
+    }
+}
+@media (min-width: 556px) {
+    .containernewsletter{
+        position: fixed;
+        top: 100px;
+        left: calc(50% - 260px);
+        display: flex;
+        box-shadow: 10px solid black;
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 520px;
+    }
+    .newsletter .newsletter-icon{
+        background: #04AA6D;
+        display: inline-block;
+        padding: 12px 15px;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        position: absolute;
+        transform: translate(180px, -80px);
+        position: -10px;
+    }
+    
 }
 
 /*.containernewsletter .newsletter-btn{
@@ -54,16 +116,6 @@ a{
     display: block;
 }
 
-.newsletter .newsletter-icon{
-    background: #04AA6D;
-    display: inline-block;
-    padding: 12px 15px;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    position: absolute;
-    transform: translate(180px, -80px);
-    position: -10px;
-}
 
 .newsletter .newsletter-icon i{
     font-size: 40px;

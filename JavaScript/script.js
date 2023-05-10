@@ -112,6 +112,15 @@ var interaveltest = setInterval(() => {
                     $( ".change" ).text( "Dark Mode" );
                 }
             }); Funktioniert nicht*/
+            $("#menubutton").click(() => {
+                if ($("#menuklein").children("ul").css("display") == "none") {
+                    $("#menuklein").children("ul").css("display", "flex");
+                    $("#menuklein").css("height", "100%");
+                } else {
+                    $("#menuklein").children("ul").css("display", "none");
+                    $("#menuklein").css("height", "60px");
+                }
+            })
         }
     }, 100);
 });
