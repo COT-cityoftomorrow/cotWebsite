@@ -75,7 +75,6 @@ var interaveltest = setInterval(() => {
                         email: $(".newsletter-form").children("input").val(),
                     }),
                     success: (data) => {
-                        alert(data.message);
                         modalClose();
                     },
                     error: (error) => {
@@ -96,7 +95,6 @@ var interaveltest = setInterval(() => {
                         Nachricht: $("#contact-subject").val(),
                     }),
                     success: (data) => {
-                        alert(data.message);
                         $("#contact-submit-form").html("<h1>Vielen Dank für Ihre Nachricht</h1><br><br><br><br><br><br><p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p><br><br><br><br><p>Mit freundlichen Grüßen</p><br><br><p>Ihr Aaseecoin Team</p>")
                     },
                     error: (error) => {

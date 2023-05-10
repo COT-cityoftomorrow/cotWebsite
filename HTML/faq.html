@@ -110,14 +110,13 @@
         $("#fragestellenbutton").click(() => {
             $.ajax({
                 method: "POST",
-                url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/fragestelleCOT",
+                url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/fragestellenCOT",
                 contentType: 'application/json',
                 dataType: 'json',
                 data: JSON.stringify({
                     frage: $("#fragestelleninput").val()
                 }),
                 success: (data) => {
-                    alert(data.message);
                     $("#faqFragen").html("<h1>Vielen Dank für Ihre Frage!</h1><br><br><br><br><br><br><p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p><br><br><br><br><p>Mit freundlichen Grüßen</p><br><br><p>Ihr Aaseecoin Team</p>")
                     setTimeout(() => {
                         window.location.href = "https://www.cityoftomorrow.de/html/faq";
