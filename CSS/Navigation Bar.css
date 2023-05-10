@@ -101,3 +101,52 @@ li a {
   width: auto;
   height: 100%;
 }
+@media (min-width: 1106px) {
+  #menubreit {
+    display: block;
+  }
+  #menuklein {
+    display: none;
+  }
+}
+@media (max-width: 1106px) {
+  #menubreit {
+    display: none;
+  }
+  #menuklein {
+    display: block;
+  }
+  .projekteausklappen > li {
+    list-style: armenian;
+  }
+}
+#menuklein {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 60px;
+  vertical-align: middle;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+#menuklein ul {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+#menubutton {
+  background-color: transparent;
+  border: none; 
+  float: right;
+}
+#menubutton img {
+  height: 60px;
+}
