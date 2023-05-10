@@ -18,7 +18,8 @@
 
 <body>
     <div style="width: 100%; text-align: center; font-size: 100px;">FAQ</div>
-    <div id="faqFragen" style="margin-top: 50px; display: flex; flex-direction: column; width: 100%; align-items: center; row-gap: 20px;">
+    <div id="faqFragen"
+        style="margin-top: 50px; display: flex; flex-direction: column; width: 100%; align-items: center; row-gap: 20px;">
         <div class="faqFrage">
             <div class="faqFrageFrage">Wann habt ihr euch gegründet?</div>
             <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
@@ -66,15 +67,30 @@
             <div class="faqFrageFrage">Wie viele Projekte habt ihr am Laufen?</div>
             <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
             <div class="faqFrageText">
-                Aktuell nur eins, wir wurden ja auch erst gerade gegründet... Unser erstes und aktuell einziges Projekt ist der Aaseecoin.
+                Aktuell nur eins, wir wurden ja auch erst gerade gegründet... Unser erstes und aktuell einziges Projekt
+                ist der Aaseecoin.
             </div>
         </div>
         <div class="faqFrage">
             <div class="faqFrageFrage">Welcher Name steht für was? COT, Aaseecoin,...?</div>
             <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
             <div class="faqFrageText">
-                COT steht für <b>C</b>ity <b>o</b>f <b>T</b>omorrow, also die Stadt von Morgen. COT ist der Name unserer Gruppe, die verschiedene Projekte umsetzt (aktuell eins), die dazu beitragen Münster zu verbessern, lebensfreundlicher zu gestalten und eine Stadt von Morgen zu werden. Der Aaseecoin unser aktuelles Projekt, eine lokale Währung für Münster, wie es sie auch schon in anderen Städten gibt (z.B. das Chiemgauer Regiogeld: <a href="https://www.chiemgauer.info/">https://www.chiemgauer.info/</a>). Bei Fragen zu den Namen oder zu etwas anderem, schreibt uns gerne über unser <a href="https://www.cityoftomorrow.de/html/contact">Kontaktformular</a> oder per E-Mail an: 
+                COT steht für <b>C</b>ity <b>o</b>f <b>T</b>omorrow, also die Stadt von Morgen. COT ist der Name unserer
+                Gruppe, die verschiedene Projekte umsetzt (aktuell eins), die dazu beitragen Münster zu verbessern,
+                lebensfreundlicher zu gestalten und eine Stadt von Morgen zu werden. Der Aaseecoin unser aktuelles
+                Projekt, eine lokale Währung für Münster, wie es sie auch schon in anderen Städten gibt (z.B. das
+                Chiemgauer Regiogeld: <a href="https://www.chiemgauer.info/">https://www.chiemgauer.info/</a>). Bei
+                Fragen zu den Namen oder zu etwas anderem, schreibt uns gerne über unser <a
+                    href="https://www.cityoftomorrow.de/html/contact">Kontaktformular</a> oder per E-Mail an:
             </div>
+        </div>
+        <div id="fragestellen">
+            <h3>Sie haben eine Frage? Hier ganz einfach Ihre Frage stellen:</h3><br>
+            <h5>Sobald wir die Frage geprüft haben, wird sie hier als Frage erscheinen. Wenn sie nicht erscheinen
+                sollte, schreiben Sie uns gerne: <a href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a></h5>
+            <br><br><br>
+            <input type="text" id="fragestelleninput">
+            <button id="fragestellenbutton">Frage stellen</button>
         </div>
     </div>
 
@@ -88,6 +104,27 @@
                 $(this).css("transform", "rotate(180deg)");
             }
         });
+        $("#fragestellenbutton").click(() => {
+            $.ajax({
+                method: "POST",
+                url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/fragestelleCOT",
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify({
+                    frage: $("#fragestelleninput").val()
+                }),
+                success: (data) => {
+                    alert(data.message);
+                    $("#faqFragen").html("<h1>Vielen Dank für Ihre Frage!</h1><br><br><br><br><br><br><p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p><br><br><br><br><p>Mit freundlichen Grüßen</p><br><br><p>Ihr Aaseecoin Team</p>")
+                    setTimeout(() => {
+                        window.location.href = "https://www.cityoftomorrow.de/html/faq";
+                    }, 5000)
+                },
+                error: (error) => {
+                    alert(error.responseJSON.error);
+                }
+            })
+        })
     </script>
     <style>
         .faqFrage {
@@ -103,6 +140,43 @@
             cursor: pointer;
         }
 
+        #fragestellen {
+            margin-bottom: 30px;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #fragestelleninput {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            padding-left: 10px;
+            font-size: 20px;
+            border: 1px solid #04AA6D;
+        }
+
+        #fragestellenbutton {
+            width: 70%;
+            height: 50px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: none;
+            padding-left: 10px;
+            font-size: 20px;
+            border: 1px solid #04AA6D;
+            background-color: #04AA6D;
+            color: white;
+            font-weight: bold;
+        }
+
         .ausklappenFaqFrage {
             transform: rotate(0deg);
             transition: transform 0.5s;
@@ -110,7 +184,7 @@
 
         .faqFrageFrage {
             word-break: break-all;
-            display:flex;
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             max-width: 500px;

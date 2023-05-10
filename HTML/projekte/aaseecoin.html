@@ -30,21 +30,28 @@
             <div class="faqFrageFrage">Wozu ist der Aaseecoin gut?</div>
             <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
             <div class="faqFrageText">
-                Der Aaseecoin ist eine Lokale Währung oder auch Regionalwährung genannt. <a
+                Der Aaseecoin ist eine Lokale Währung oder auch Regionalwährung genannt. ( siehe <a
                     href="https://de.wikipedia.org/wiki/Regionalw%C3%A4hrung">Regionalwährung
-                    Wikipediaartikel</a> lokale Währung stärkt die lokale Wirtschaft, dadurch, dass die Einkäufe
+                    Wikipediaartikel</a>) Eine Lokale Währung stärkt die lokale Wirtschaft, dadurch, dass die Einkäufe
                 mit der Währung lokal getätigt werden und weniger importiert wird. Durch weniger Importe wird
                 CO2 gespart, da die Importe meist über Auto oder Flug erfolgen. Außerdem wird Münster dadurch
-                weniger abhängig von nicht in Münster ansässigen Firmen.</div>
+                weniger abhängig von nicht in Münster ansässigen Firmen. Dies ist nur eine Kurz-Fassung einer komplexen
+                Möglichkeit um die lokale Wirtschaft zu unterstützen und zu fördern. Für mehr Infos lesen Sie sich gerne
+                den Wikipedia Artikel (siehe oben) dazu durch. Außerdem beantworten wir Ihnenn natürlich gerne Fragen
+                dazu und zu anderen Themen per Mail: <a href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a>
+            </div>
         </div>
         <div class="faqFrage">
             <div class="faqFrageFrage">Was ist mit dem Umtauschen von Geld in die Währung?</div>
             <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
             <div class="faqFrageText">
                 Bei dem Umtausch von Euro in Aaseecoin ist ein Wechselkurs von 1:1. Beim Umtausch von Aaseecoin
-                in Euro ist eine andere Umtauschrate.Dort erhält man 95% des Betrags, d.h. wenn man 100
+                in Euro ist eine andere Umtauschrate. Dort erhält man 95% des Betrags, d.h. wenn man 100
                 Aaseecoin in Euro umtauschen möchte erhält man 95€. Von diesen 5% werden 4% gespendet und 1%
-                wird genutzt um unsere Kosten zu decken.
+                wird genutzt um unsere Kosten zu decken. Wenn Sie einen Vorschlag haben, an wen wir diese 4% spenden
+                könnten, schreiben Sie uns gerne an: <a href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a>.
+                Übrigens: Die lokale Währung in der Region Chiemgau, verfährt ganz ähnlich. Schauen Sie sich das gerne
+                mal an: <a href="https://www.chiemgauer.info/service/faq">FAQ der Chiemgauer Regiogeld Website</a>
             </div>
         </div>
         <div class="faqFrage">
@@ -70,12 +77,20 @@
             <div class="faqFrageFrage">Wie kann man als Geschäft mitmachen?</div>
             <img class="ausklappenFaqFrage" src="/Fotos/pfeilunten.png" style="width:50px;" alt="Ausklappen">
             <div class="faqFrageText">
-                Um als Geschäft mitzumachen, gibt es 2 Bedingungen:
-                1. Das Geschäft wurde in Münster gegründet.
-                2. Das Geschäft existiert nur in Münster und nicht in anderen Städten.
-                Wir werden viele lokale Geschäfte aus Münster anschreiben, wenn Sie aber ein Geschäft besitzen oder kennen, schreiben Sie uns gerne an: <a
-                href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a>
+                Um als Geschäft mitzumachen, gibt es nur eine Bedingung:
+                Das Geschäft existiert in Münster bzw. hat eine Filliale in Münster.
+                Wir werden viele lokale Geschäfte aus Münster anschreiben, aber dennoch: Wenn Sie ein Geschäft besitzen
+                oder
+                kennen, schreiben Sie uns gerne an: <a href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a>
             </div>
+        </div>
+        <div id="fragestellen">
+            <h3>Sie haben eine Frage? Hier ganz einfach Ihre Frage stellen:</h3><br>
+            <h5>Sobald wir die Frage geprüft haben, wird sie hier als Frage erscheinen. Wenn sie nicht erscheinen
+                sollte, schreiben Sie uns gerne: <a href="mailto:info@cityoftomorrow.de">info@cityoftomorrow.de</a></h5>
+            <br><br><br>
+            <input type="text" id="fragestelleninput">
+            <button id="fragestellenbutton">Frage stellen</button>
         </div>
     </div>
     <img src="/Fotos/Coin Bild zum ausprobieren.JPG Bild">
@@ -89,6 +104,27 @@
                 $(this).css("transform", "rotate(180deg)");
             }
         });
+        $("#fragestellenbutton").click(() => {
+            $.ajax({
+                method: "POST",
+                url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/fragestellenAaseecoin",
+                contentType: 'application/json',
+                dataType: 'json',
+                data: JSON.stringify({
+                    frage: $("#fragestelleninput").val()
+                }),
+                success: (data) => {
+                    alert(data.message);
+                    $("#faqFragen").html("<h1>Vielen Dank für Ihre Frage!</h1><br><br><br><br><br><br><p>Wir werden uns so schnell wie möglich bei Ihnen melden.</p><br><br><br><br><p>Mit freundlichen Grüßen</p><br><br><p>Ihr Aaseecoin Team</p>")
+                    setTimeout(() => {
+                        window.location.href = "https://www.cityoftomorrow.de/html/projekte/aaseecoin";
+                    }, 5000)
+                },
+                error: (error) => {
+                    alert(error.responseJSON.error);
+                }
+            })
+        })
     </script>
     <style>
         .faqFrage {
@@ -102,6 +138,43 @@
             padding: 20px;
             border-radius: 10px;
             cursor: pointer;
+        }
+
+        #fragestellen {
+            margin-bottom: 30px;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #fragestelleninput {
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            padding-left: 10px;
+            font-size: 20px;
+            border: 1px solid #04AA6D;
+        }
+
+        #fragestellenbutton {
+            width: 70%;
+            height: 50px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: none;
+            padding-left: 10px;
+            font-size: 20px;
+            border: 1px solid #04AA6D;
+            background-color: #04AA6D;
+            color: white;
+            font-weight: bold;
         }
 
         .ausklappenFaqFrage {
