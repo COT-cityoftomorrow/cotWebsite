@@ -52,6 +52,12 @@ a{
         transform: translate(0px, -110px);
     }
 }
+@media (max-width: 450px) {
+    input[placeholder="Deine E-Mail"]:focus, .input[placeholder="Deine E-Mail"]:active {
+        transform: translate(0px, -200px);
+        background-color: white;
+    }
+}
 @media (min-width: 556px) {
     .containernewsletter{
         position: fixed;
