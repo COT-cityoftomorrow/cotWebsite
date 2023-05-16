@@ -49,8 +49,14 @@ ul {
 li:has(div[class="projekteausklappen"]) {
   min-width: 200px;
 }
+li:has(.projekteausklappen) > .projekteausklappen {
+  margin-top: 20px;
+}
 .active:has(.projekteausklappen) > .projekteausklappen{
   margin-top: 20px;
+}
+.projekteausklappen{
+  border-top: 3px solid white;
 }
 li {
   text-align: center;
