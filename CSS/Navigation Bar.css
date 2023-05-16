@@ -96,11 +96,11 @@ li a {
   padding: 20px 16px;
   background-color: #04AA6D;
 }
-.active:has(a[href="/index.html"]) {
+.umhomeimage {
   padding: 0;
   background-color: #04AA6D;
 }
-.active a[href="/index.html"] {
+.active .homeimage {
   padding: 20px 16px;
 }
 #CoinAppIcon {
