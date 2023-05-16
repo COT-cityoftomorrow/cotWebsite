@@ -28,6 +28,8 @@
 </head>
 
 <body>
+    <div class="image-container">
+        <img src="Fotos/Coin Bild Startseite.JPG" alt="Mein Bild">
     <div id="Start Text"></div>
             <h1>Herzlich willkommen auf unserer Webseite!</h1>
             <br><br>
@@ -43,6 +45,7 @@
             Dein COT-Team</div>
 
       </div>
+    </div>  
 
 
     <style>
@@ -81,9 +84,25 @@
             list-style: none;
         }
 
-        h1 {
-            font-size: 20px;
+        
 
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img {
+            display: block;
+        }
+
+        .image-container .image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
         }
 
 
