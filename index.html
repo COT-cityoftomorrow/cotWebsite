@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    <div class="pattern-container">
         <div id="Start Text"></div>
             <h1>Herzlich willkommen auf unserer Webseite!</h1>
             <br><br>
@@ -43,6 +44,7 @@
             Dein COT-Team</div>
 
       </div>
+    </div>  
 
 
 
@@ -54,7 +56,6 @@
             height: 100%;
             border-width: 0;
             text-align: center;
-            background: repeating-linear-gradient(45deg, #000, #000 10px, #FFF 10px, #FFF 20px);
         }
 
         html {
@@ -86,6 +87,17 @@
         h1 {
             font-size: 20px;
 
+        }
+
+        .pattern-container {
+            position: relative;
+            background: linear-gradient(45deg, #000, #000 10px, #FFF 10px, #FFF 20px);
+        }
+
+        .pattern-container h1 {
+            position: relative;
+            z-index: 1;
+            /* Weitere Formatierung deines Textes */
         }
 
 
