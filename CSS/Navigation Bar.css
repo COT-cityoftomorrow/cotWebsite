@@ -49,8 +49,15 @@ ul {
 li:has(div[class="projekteausklappen"]) {
   min-width: 200px;
 }
+li:has(.projekteausklappen) > .projekteausklappen {
+  margin-top: 20px;
+}
 .active:has(.projekteausklappen) > .projekteausklappen{
   margin-top: 20px;
+}
+.projekteausklappen{
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
 }
 li {
   text-align: center;
@@ -90,11 +97,11 @@ li a {
   padding: 20px 16px;
   background-color: #04AA6D;
 }
-.active:has(a[href="/index.html"]) {
+.active.umhomeimage {
   padding: 0;
   background-color: #04AA6D;
 }
-.active a[href="/index.html"] {
+.active.homeimage {
   padding: 20px 16px;
 }
 #CoinAppIcon {
