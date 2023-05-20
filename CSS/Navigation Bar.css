@@ -157,3 +157,14 @@ li a {
 #menubutton img {
   height: 60px;
 }
+        footer {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            padding: 10px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            height: auto;
+width: 100%;
+        }
