@@ -168,3 +168,12 @@ li a {
             height: auto;
 width: 100%;
         }
+#ICON {
+            width: 60px;
+            height: 60px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        footer a {
+            color: black;
+        }
