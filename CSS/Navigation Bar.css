@@ -15,7 +15,7 @@
 
 .projekteausklappen a {
   display: flex;
-  width:100%;
+  width: 100%;
   height: auto;
   z-index: 100000;
   flex-direction: column;
@@ -26,9 +26,10 @@
 }
 
 
-li:hover:has(.projekteausklappen) > .projekteausklappen {
+li:hover:has(.projekteausklappen)>.projekteausklappen {
   display: flex;
 }
+
 ul {
   position: fixed;
   top: 0;
@@ -43,22 +44,27 @@ ul {
   padding: 0;
   background-color: #333;
 }
+
 /*body>*:not(#loading) {
   filter: blur(3em);
 }*/
 li:has(div[class="projekteausklappen"]) {
   min-width: 200px;
 }
-li:has(.projekteausklappen) > .projekteausklappen {
+
+li:has(.projekteausklappen)>.projekteausklappen {
   margin-top: 20px;
 }
-.active:has(.projekteausklappen) > .projekteausklappen{
+
+.active:has(.projekteausklappen)>.projekteausklappen {
   margin-top: 20px;
 }
-.projekteausklappen{
+
+.projekteausklappen {
   border-top: 3px solid white;
   border-bottom: 3px solid white;
 }
+
 li {
   text-align: center;
   float: left;
@@ -66,7 +72,7 @@ li {
 
 .special {
   display: block;
-  height: 100%; 
+  height: 100%;
   min-height: 60px;
   padding: 20px 16px;
   background-color: #333;
@@ -75,14 +81,17 @@ li {
 .paddingwith {
   padding: 20px 16px;
 }
+
 body {
   padding-top: 70px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 html {
   padding-top: 70px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 li a {
   width: auto;
   display: inline;
@@ -90,43 +99,53 @@ li a {
   text-align: center;
   text-decoration: none;
 }
+
 .active {
   display: block;
-  height: 100%; 
+  height: 100%;
   min-height: 60px;
   padding: 20px 16px;
   background-color: #04AA6D;
 }
+
 .active.umhomeimage {
   padding: 0;
   background-color: #04AA6D;
 }
+
 .active.homeimage {
   padding: 20px 16px;
 }
+
 #CoinAppIcon {
   width: auto;
   height: 100%;
 }
+
 @media (min-width: 1106px) {
   #menubreit {
     display: block;
   }
+
   #menuklein {
     display: none;
   }
 }
+
 @media (max-width: 1106px) {
   #menubreit {
     display: none;
   }
+
   #menuklein {
     display: block;
   }
-  .projekteausklappen > li {
+
+  .projekteausklappen>li {
     list-style: armenian;
   }
 }
+
 #menuklein {
   position: fixed;
   top: 0;
@@ -139,6 +158,7 @@ li a {
   padding: 0;
   background-color: #333;
 }
+
 #menuklein ul {
   margin-top: 60px;
   display: flex;
@@ -149,31 +169,36 @@ li a {
   width: 100%;
   padding: 0;
 }
+
 #menubutton {
   background-color: transparent;
-  border: none; 
+  border: none;
   float: right;
 }
+
 #menubutton img {
   height: 60px;
 }
-        footer {
-            position: absolute;
-            bottom: 0;
-            text-align: center;
-            padding: 10px;
-            background-color: #04AA6D;
-            color: white;
-            text-decoration: none;
-            height: auto;
-width: 100%;
-        }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+  background-color: #04AA6D;
+  color: white;
+  text-decoration: none;
+  height: auto;
+  width: 100%;
+}
+
 #ICON {
-            width: 60px;
-            height: 60px;
-            vertical-align: middle;
-            margin-right: 5px;
-        }
-        footer a {
-            color: black;
-        }
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+footer a {
+  color: black;
+}
