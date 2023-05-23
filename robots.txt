@@ -1,4 +1,4 @@
-User-agent *
+User-agent: *
 Allow: /
 Disallow: /HTML/AGB.html
 Disallow:/HTML/Navi.html
