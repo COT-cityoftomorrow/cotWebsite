@@ -111,6 +111,9 @@ a{
     height: 360px;
     
 }
+body {
+    text-align: unset;
+}
 
 .containernewsletter .newsletter.active{
     display: block;
