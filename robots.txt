@@ -1,12 +1,12 @@
 User-agent *
-Allow /
-Disallow /HTML/AGB.html
-Disallow /HTML/Navi.html
-Disallow /HTML/Register.html
-Disallow /HTML/passwortvergessen.html
-Disallow /HTML/newsletter.html
-Disallow /HTML/Login.html
-Disallow /HTML/News.html
-Disallow /HTML/Impressum.html
+Allow: /
+Disallow: /HTML/AGB.html
+Disallow:/HTML/Navi.html
+Disallow: /HTML/Register.html
+Disallow: /HTML/passwortvergessen.html
+Disallow: /HTML/newsletter.html
+Disallow: /HTML/Login.html
+Disallow: /HTML/News.html
+Disallow: /HTML/Impressum.html
 
 Sitemap: https://www.cityoftomorrow.de/sitemap.xml
