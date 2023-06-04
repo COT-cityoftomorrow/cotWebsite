@@ -75,6 +75,11 @@
                         $("#anzeigepopupinmitarbeiterbereich").css("display", "flex");
                         $(".popupinanzeigepopupinmitarbeiterbereich[foraction='" + $(event.target).attr("action") + "']").css("display", "flex");
                     })
+                    $("#buttonemailversenden").click(() => {
+                        $.ajax(() => {
+
+                        })
+                    })
                 }
                 $("#loginbutton").click(() => {
                     $.ajax({
@@ -102,8 +107,8 @@
         <style>
             #emailtextnewsletter {
                 width: 90%;
-                height: 300px;
-                max-height: 60%;
+                height: 200px;
+                max-height: 40%;
             }
 
             .popupinanzeigepopupinmitarbeiterbereich {
