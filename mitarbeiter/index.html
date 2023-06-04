@@ -28,7 +28,7 @@
             <button class="forPopUp" action="sendNewsletter">Newsletter versenden</button>
         </div>
         <div id="anzeigepopupinmitarbeiterbereich">
-            <div style="display: none;" class="popupinanzeigepopupinmitarbeiterbereich" foraction="sendNewsletter"></div>
+            <div style="display: none;" class="popupinanzeigepopupinmitarbeiterbereich" foraction="sendNewsletter">Test</div>
         </div>
     </div>
     <script>
@@ -74,7 +74,6 @@
                         password: $("#password").val()
                     }),
                     success: (data) => {
-                        alert("Erfolgreich eingeloggt!");
                         $.cookie("token", data.token);
                         $("#loginfield").css("display", "none");
                         $("#mitarbeiterbereich").css("display", "flex");
