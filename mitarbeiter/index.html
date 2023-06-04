@@ -76,8 +76,22 @@
                         $(".popupinanzeigepopupinmitarbeiterbereich[foraction='" + $(event.target).attr("action") + "']").css("display", "flex");
                     })
                     $("#buttonemailversenden").click(() => {
-                        $.ajax(() => {
-
+                        $.ajax({
+                            method: "POST",
+                            url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/sendNewsletter",
+                            contentType: 'application/json',
+                            dataType: 'json',
+                            Authorization: $.cookie("token"),
+                            data: JSON.stringify({
+                                subject: "cityoftomorroe Newsletter",
+                                text: $("#emailtextnewsletter").html()
+                            }),
+                            success: (data) => {
+                                console.log(data)
+                            },
+                            error: (error) => {
+                                console.log(error)
+                            }
                         })
                     })
                 }
