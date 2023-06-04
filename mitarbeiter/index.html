@@ -33,7 +33,7 @@
     </div>
     <script>
         function abmelden() {
-            $.removeCookie('the_cookie', { path: '/' });
+            $.removeCookie('token', { path: '/' });
             $("#loginfield").css("display", "flex");
             $("#mitarbeiterbereich").css("display", "none");
             $("window").attr("location", "");
