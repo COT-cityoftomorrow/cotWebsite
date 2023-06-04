@@ -45,7 +45,7 @@
                 $(".popupinanzeigepopupinmitarbeiterbereich").css("display", "none");
             }
             $(document).ready(() => {
-                $('input').keypress(function (e) {
+                $(document).keydown(function (e) {
                     if (e.which == 27) {
                         $("#anzeigepopupinmitarbeiterbereich").css("display", "none");
                         $(".popupinanzeigepopupinmitarbeiterbereich").css("display", "none");
