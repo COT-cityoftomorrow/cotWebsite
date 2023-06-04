@@ -28,7 +28,7 @@
             <button class="forPopUp" action="sendNewsletter">Newsletter versenden</button>
         </div>
         <div id="anzeigepopupinmitarbeiterbereich">
-            <div id="popupinanzeigepopupinmitarbeiterbereich"></div>
+            <div style="display: none;" class="popupinanzeigepopupinmitarbeiterbereich" foraction="sendNewsletter"></div>
         </div>
     </div>
     <script>
@@ -60,6 +60,7 @@
                 })
                 $(".forPopUp").click(() => {
                     $(".anzeigepopupinmitarbeiterbereich").css("display", "flex");
+                    $(".popupinanzeigepopupinmitarbeiterbereich[foraction='" + $(event.target).attr("action") + "']").css("display", "flex");
                 })
             }
             $("#loginbutton").click(() => {
@@ -114,7 +115,7 @@
             min-width: 100px;
             min-height: 30px;
             padding: 50px;
-            color: auto;
+            color: white;
             font-family: 'Ubuntu', sans-serif;
             font-size: 20px;
             text-align: center;
