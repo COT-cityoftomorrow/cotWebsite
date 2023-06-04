@@ -18,14 +18,14 @@
         <button id="loginbutton">Einloggen</button>
     </div>
     <div id="mitarbeiterbereich" style="display: none;">
+        <div class="anzeigeinmitarbeiterbereich" style="margin-right: 100px; background-color: grey;">
+            <h1>Abmelden</h1>
+            <button onclick="abmelden()">Abmelden</button>
+        </div>
         <div class="anzeigeinmitarbeiterbereich" style="background-color: #04AA6D;">
             <h1>Newsletter</h1>
             <span>Aktuelle Anmeldungen: <span id="aktuelleAnmeldungenNewsletterzahl"></span></span><br>
             <button class="forPopUp" action="sendNewsletter">Newsletter versenden</button>
-        </div>
-        <div class="anzeigeinmitarbeiterbereich" style="background-color: grey;">
-            <h1>Abmelden</h1>
-            <button onclick="abmelden()">Abmelden</button>
         </div>
         <div id="anzeigepopupinmitarbeiterbereich">
             <div id="popupinanzeigepopupinmitarbeiterbereich"></div>
@@ -131,7 +131,7 @@
             max-height: 100%;
             padding: 50px;
             background-color: white;
-            color: black;
+            color: auto;
             font-family: 'Ubuntu', sans-serif;
             font-size: 20px;
             text-align: center;
