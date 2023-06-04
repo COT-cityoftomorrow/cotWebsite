@@ -33,10 +33,10 @@
     </div>
     <script>
         function abmelden() {
-            $.removeCookie('token', { path: '/' });
+            $.removeCookie('token');
             $("#loginfield").css("display", "flex");
             $("#mitarbeiterbereich").css("display", "none");
-            $("window").attr("location", "");
+            $(window).attr("location", "");
         }
         $(document).ready(() => {
             if ($.cookie("token") != undefined) {
@@ -78,7 +78,7 @@
                         $.cookie("token", data.token);
                         $("#loginfield").css("display", "none");
                         $("#mitarbeiterbereich").css("display", "flex");
-                        $("window").attr("location", "");
+                        $(window).attr("location", "");
                     },
                     error: (error) => {
                         alert(error.responseJSON.error);
