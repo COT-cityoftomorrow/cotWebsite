@@ -13,7 +13,7 @@
 <body>
     <div id="loginfield" style="display: flex;">
         <h1>Einloggen</h1>
-        <input type="text" id="email" placeholder="Benutzername">
+        <input type="text" id="email" placeholder="E-Mail">
         <input type="password" id="password" placeholder="Passwort">
         <button id="loginbutton">Einloggen</button>
     </div>
@@ -67,6 +67,7 @@
                         $.cookie("token", data.token);
                         $("#loginfield").css("display", "none");
                         $("#mitarbeiterbereich").css("display", "flex");
+                        $("window").attr("location", "");
                     },
                     error: (error) => {
                         alert(error.responseJSON.error);
