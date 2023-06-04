@@ -40,7 +40,17 @@
                 $("#mitarbeiterbereich").css("display", "none");
                 $(window).attr("location", "");
             }
+            function closePopup() {
+                $("#anzeigepopupinmitarbeiterbereich").css("display", "none");
+                $(".popupinanzeigepopupinmitarbeiterbereich").css("display", "none");
+            }
             $(document).ready(() => {
+                $('input').keypress(function (e) {
+                    if (e.which == 27) {
+                        $("#anzeigepopupinmitarbeiterbereich").css("display", "none");
+                        $(".popupinanzeigepopupinmitarbeiterbereich").css("display", "none");
+                    }
+                });
                 if ($.cookie("token") != undefined) {
                     $("#loginfield").css("display", "none");
                     $("#mitarbeiterbereich").css("display", "flex");
@@ -91,13 +101,14 @@
         <style>
             #emailtextnewsletter {
                 width: 90%;
-                max-height: 400px;
+                max-height: 300px;
             }
 
             .popupinanzeigepopupinmitarbeiterbereich {
                 display: none;
                 flex-direction: column;
                 justify-content: center;
+                row-gap: 20px;
                 align-items: center;
                 width: 500px;
                 max-width: 100%;
@@ -140,6 +151,7 @@
                 color: #333;
                 cursor: pointer;
             }
+
             .popupinanzeigepopupinmitarbeiterbereich>button {
                 width: 200px;
                 max-width: 60%;
@@ -153,6 +165,7 @@
                 color: white;
                 cursor: pointer;
             }
+
             .anzeigeinmitarbeiterbereich>h1 {
                 font-size: 30px;
             }
