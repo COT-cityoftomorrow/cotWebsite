@@ -2,6 +2,12 @@
 <html lang="de">
 
 <head>
+    <IfModule mod_rewrite.c>
+        RewriteEngine on
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule .* 404.html [L]
+      </IfModule>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/CSS/Navigation Bar.css">
     <link rel="stylesheet" href="/CSS/index.css">
