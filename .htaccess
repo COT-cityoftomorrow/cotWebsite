@@ -1,2 +1,3 @@
     RewriteEngine on
     RewriteRule ^Portfolios(/.*|)$ $1 [L,NC]  
+    DirectoryIndex /HTML/home
