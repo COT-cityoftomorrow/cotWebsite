@@ -7,7 +7,7 @@
 
 var loading = document.createElement("img");
 loading.id = "loading";
-loading.src = "/Fotos/loading.gif";
+loading.src = "/HTML/loading.html";
 loading.style = "height: 200px; width: 200px; background-color: black; position: fixed; top: calc(50% - 50px); left: calc(50% - 50px); z-index: 1000;";
 document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(loading);
