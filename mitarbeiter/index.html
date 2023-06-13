@@ -31,7 +31,7 @@
             <div style="display: none;" class="popupinanzeigepopupinmitarbeiterbereich" foraction="sendNewsletter">
                 <img src="/Fotos/Kreuz.png" id="Kreuzpopupschließen" onclick="closePopup()">
                 <textarea placeholder="Text" id="emailtextnewsletter" style="padding: 10px;"></textarea><br>
-                <button id="buttonemailversenden">Senden</button>
+                <button id="buttonemailversenden" onclick="sendnewsletterbtnfunction">Senden</button>
             </div>
         </div>
         <div style="display: flex;" id="Adminbereich">
@@ -48,6 +48,25 @@
             function closePopup() {
                 $("#anzeigepopupinmitarbeiterbereich").css("display", "none");
                 $(".popupinanzeigepopupinmitarbeiterbereich").css("display", "none");
+            }
+            function sendnewsletterbtnfunction() {
+                $.ajax({
+                    method: "POST",
+                    url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/sendNewsletters",
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    Authorization: $.cookie("token"),
+                    data: JSON.stringify({
+                        subject: "cityoftomorrow Newsletter",
+                        text: $("#emailtextnewsletter").html()
+                    }),
+                    success: (data) => {
+                        console.log(data)
+                    },
+                    error: (error) => {
+                        console.log(error)
+                    }
+                })
             }
             $(document).ready(() => {
                 $(document).keydown(function (e) {
@@ -78,25 +97,6 @@
                     $(".forPopUp").click(() => {
                         $("#anzeigepopupinmitarbeiterbereich").css("display", "flex");
                         $(".popupinanzeigepopupinmitarbeiterbereich[foraction='" + $(event.target).attr("action") + "']").css("display", "flex");
-                    })
-                    $("#buttonemailversenden").click(() => {
-                        $.ajax({
-                            method: "POST",
-                            url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/sendNewsletter",
-                            contentType: 'application/json',
-                            dataType: 'json',
-                            Authorization: $.cookie("token"),
-                            data: JSON.stringify({
-                                subject: "cityoftomorroe Newsletter",
-                                text: $("#emailtextnewsletter").html()
-                            }),
-                            success: (data) => {
-                                console.log(data)
-                            },
-                            error: (error) => {
-                                console.log(error)
-                            }
-                        })
                     })
                 }
                 $("#loginbutton").click(() => {
