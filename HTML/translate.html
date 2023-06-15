@@ -2,6 +2,7 @@
 <html lang="de">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/deepl/build/deepl.min.js"></script>
     <script>
         window.onload = move()
     </script>
@@ -17,49 +18,21 @@
     <link rel="icon" type="image/x-icon" href="/Fotos/AaseeCoinAppIcon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/darktheme.css">
-    <script src="https://cdn.jsdelivr.net/npm/deepl/build/deepl.min.js"></script>
+    <link rel="stylesheet" href="/CSS/translate.css">
+    <script src="/JavaScript/translate.js"></script>
     <title>Cityoftomorrow</title>
     <meta name="keywords"
         content="Münster, Aasseecoin, aaseecoin, münster, muenster, Stadt Münster, Stadt, COT, cityoftomorrow, CityOfTomorrow, CITYOFTOMORROW, City Of Tomorrow, COT -- cityoftomorrow, COT -- CityOfTomorrow, COT cityoftomorrow, COT CityOfTomorrow, Lonnie Schemann, Schemann, Lonnie, Schemann Lonnie, Lonnie Andreas, Lonnie Andreas Schemann, Andreas Schemann, Wolfgang Schemann, Stadt von Morgen, Morgen, Stadt, City, Of, Tomorrow, tomorrow, morgen, of, city, of city, Münster, Deutschland, Münster">
     <meta name="author" content="Lonnie Schemann, 4 weitere Jugendliche (nicht namentlich genannt (Datenschutz))">
-    <meta name='description' content='Dies ist die Aaseecoin-Projektseite der COT-Website! Wir sind: ein paar Jugendliche!<br><br> Wir waren
+    <meta name='description'
+        content='Dies ist die Aaseecoin-Projektseite der COT-Website! Wir sind: ein paar Jugendliche!<br><br> Wir waren
     auf einem Hackathon in Münster, dort haben wir
     COT ins Leben gerufen.'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        function translatePage() {
-          var languageSelect = document.getElementById('language-select');
-          var selectedLanguage = languageSelect.value;
-      
-          var startText = document.getElementById('startText');
-          var originalText = startText.innerHTML;
-      
-          deepl.translate({
-            text: originalText,
-            target_lang: selectedLanguage,
-            auth_key: 'YOUR_DEEPL_API_KEY'
-          }).then(function (response) {
-            var translatedText = response.data.translations[0].text;
-            startText.innerHTML = translatedText;
-          }).catch(function (error) {
-            console.error('Translation error:', error);
-          });
-        }
-      </script>
-      
 </head>
 
 <body>
-
-    <select id="language-select">
-        <option value="en">English</option>
-        <option value="es">Spanish</option>
-        <option value="fr">French</option>
-        <!-- Add more language options as needed -->
-    </select>
-    <button onclick="translatePage()">Translate</button>
-    
 
     <div id="startText">
         <h1>Herzlich willkommen auf unserer Webseite!</h1>
@@ -80,6 +53,14 @@
 
         Dein COT-Team
     </div>
+
+    <select id="language-select">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <!-- Add more language options as needed -->
+    </select>
+    <button onclick="translatePage()">Translate</button>
 
     <style>
         body {
@@ -106,6 +87,27 @@
             font-size: 20px;
         }
     </style>
+
+    <script>
+        function translatePage() {
+            var languageSelect = document.getElementById('language-select');
+            var selectedLanguage = languageSelect.value;
+
+            var startText = document.getElementById('startText');
+            var originalText = startText.innerHTML;
+
+            deepl.translate({
+                text: originalText,
+                target_lang: selectedLanguage,
+                auth_key: 'YOUR_DEEPL_API_KEY'
+            }).then(function (response) {
+                var translatedText = response.data.translations[0].text;
+                startText.innerHTML = translatedText;
+            }).catch(function (error) {
+                console.error('Translation error:', error);
+            });
+        }
+    </script>
 </body>
 
 </html>
