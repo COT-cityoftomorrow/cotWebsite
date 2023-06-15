@@ -1,0 +1,37 @@
+.language-changer {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #language-toggle {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  #language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #language-dropdown li {
+    padding: 5px;
+  }
+  
+  #language-dropdown li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  #language-dropdown li a:hover {
+    text-decoration: underline;
+  }
+  
