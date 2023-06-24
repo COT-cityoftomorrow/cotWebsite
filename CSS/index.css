@@ -9,6 +9,7 @@ body {
     position: relative;
     text-align: center;
     color: white;
+    font-size: 7px; 
 }
 
 .bottom-left {
