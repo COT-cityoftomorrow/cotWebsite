@@ -147,7 +147,7 @@ li a {
 }
 
 #menuklein {
-  position: bottom;
+  position: fixed;
   top: 0;
   width: 100%;
   left: 0;
@@ -181,7 +181,7 @@ li a {
 }
 
 footer {
-  position: fixed;
+  position: bootom;
   bottom: 0;
   text-align: center;
   padding: 10px;
