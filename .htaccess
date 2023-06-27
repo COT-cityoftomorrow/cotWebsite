@@ -1,0 +1,2 @@
+    RewriteEngine on
+    RewriteRule ^Portfolios(/.*|)$ $1 [L,NC]  
