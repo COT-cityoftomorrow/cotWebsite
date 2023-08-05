@@ -201,3 +201,6 @@ footer {
 footer a {
   color: black;
 }
+body {
+  padding-bottom: 100px;
+}
