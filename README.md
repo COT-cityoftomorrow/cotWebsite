@@ -1,2 +1,2 @@
-# cityoftomorrow.de
-Die offizielle COT seite
+# COT Seite Source
+Die offizielle COT seite cityiftomorrow.de
