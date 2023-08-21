@@ -1,6 +1,7 @@
 @import url('/Schriften/Ubuntu/Ubuntu-Regular.ttf');
 
 .typewriter h1 {
+    width: 200px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
