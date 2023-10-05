@@ -23,6 +23,9 @@ TxtType.prototype.tick = function() {
     var that = this;
     var delta = 100;
 
+    if (this.txt[this.txt.length-1] == ' ')
+    delta = 0;
+
     if (this.isDeleting) { delta /= 2; }
 
     if (!this.isDeleting && this.txt === fullTxt) {
