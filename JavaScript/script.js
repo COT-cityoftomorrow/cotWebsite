@@ -5,6 +5,12 @@
 
 
 
+
+
+
+
+
+
 var loading = document.createElement("img");
 loading.id = "loading";
 loading.src = "/Fotos/loading.gif";
@@ -54,9 +60,10 @@ var interaveltest = setInterval(() => {
             };
             //modalOpen();
             setTimeout(() => {
-                modalOpen()
-                setInterval(modalOpen(), 60000);
-            }, 60000)
+                if (!localStorage.getItem("emailsubscription"))
+                    modalOpen();
+                    //setInterval(modalOpen(), 60000);
+            }, 600000)
             if (localStorage.getItem("token") != undefined && localStorage.getItem("token") != "" && localStorage.getItem("token") != null) {
                 $("a[href='HTML/Login.html']").parent("li").css("display", "none");
                 $("a[href='../HTML/Login.html']").paren("li").css("display", "none");
@@ -76,6 +83,7 @@ var interaveltest = setInterval(() => {
                     }),
                     success: (data) => {
                         modalClose();
+                        localStorage.setItem("emailsubscription", "banane"); 
                     },
                     error: (error) => {
                         alert(error.responseJSON.error);

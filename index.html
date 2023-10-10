@@ -9,6 +9,7 @@
     <script src="/JavaScript/jquery-3.6.4.min.js"></script>
     <script src="/JavaScript/jquery.cookie.js"></script>
     <script src="/JavaScript/script.js"></script>
+    <script src="/JavaScript/typewriter.js"></script>
     <link rel="stylesheet" href="/CSS/newspaper.css">
     <link rel="icon" type="image/x-icon" href="/Fotos/AaseeCoinAppIcon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +26,12 @@
 </head>
 
 <body>
-
-    <div style="text-align: center; color: white; font-size: 25px; width: 100%; transform: translate(0, -33px);">
-        <h1 style="transform: translate(0, 100px);">Herzlich willkommen auf unserer Webseite!</h1>
-        <img src="/Fotos/Coin Bild zum ausprobieren.JPG" alt="Coin" style="width: 100%;">
+    <div class="typewriteparent">
+        <div href="" class="typewrite" data-period="2000" data-type='["Herzlich Willkommen auf unserer Webseite.", "Es freut uns, dass Sie sich für unsere Aktivitäten interessieren.."]'>
+          <span class="wrap"></span>
+        </div>
     </div>
-
+    <br>
     <!-- BITTE AUSKOMMENTIERT ABER STEHEN LASSEN, NEWS FUNKTION IN ARBEIT <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
@@ -56,8 +57,18 @@
     </div>-->
 
     <style>
+
+        @import url('/Schriften/Roboto_Mono/static/RobotoMono-Medium.ttf');
+
+        .typewriteparent {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 50px;
+            padding-top: 300px;
+            text-align: center;
+            padding-bottom: 250px;
+        }
         body {
-            font-family: 'Ubuntu', sans-serif;
+            font-family: 'Rubik', sans-serif;
             width: 100%;
             height: 100%;
             border-width: 0;
