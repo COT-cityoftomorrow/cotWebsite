@@ -1,70 +1,67 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<div id="menuklein">
-    <li class="umhomeimage" class="homeimage" style="height:60px; vertical-align: middle;"><a style="height: 100%;"
-            href="/index.html"><img style="padding: 0; height:100%;" src="/Fotos/logo.png"
-                id="CoinAppIcon"></a>
-    </li>
-    <button id="menubutton"><img src="/Fotos/menu-2925825__340.png" alt=""></button>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="/CSS/Navigation Bar.css">
+<div class="navigation">
     <ul>
-        <li class="paddingwith"><a href="/index.html">Home</a></li>
-        <!--<li class="paddingwith"><a href="/html/news">News</a></li>-->
-        <!--<li class="paddingwith"><a href="/html/login">Anmelden</a></li>-->
-        <li class="paddingwith"><a href="/html/Contact">Kontakt</a></li>
-        <li class="paddingwith"><a href="/html/faq">FAQ</a></li>
-        <!--<li class="paddingwith"><a href="/html/register">Registrieren</a></li>-->
-        <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
-        <li class="paddingwith"><a href="/html/mitmachen">Mitmachen</a></li>
-        <li class="paddingwith"><a href="#" class="overprojekteausklappen">Projekte</a>
-            <div class="projekteausklappen" style="display: none;"><a href="/html/projekte/aaseecoin">Aaseecoin</a>
-            </div>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">Home</span>
+            </a>
         </li>
-        <!--<li class="paddingwith"><span class="change" style=" color: white;">Heller Modus</span></li>
-    DAS FUNKTIONIERT IMMER NOCH NICHT!!! LASS DAS SO STEHEN, BIS ES FUNKTIONIERT!!!
--->
-        <li class="paddingwith" style="float:right"> <a href="/html/UeberUns">Über Uns</a></li>
-        <li class="paddingwith" style="float:right"> <a href="/html/Impressum">Impressum</a></li>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">Kontakt</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">FAQ</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">Newsletter</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">Mitmachen</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">Ueber Uns</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">Impressum</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="">
+                <span class="icon"></span>
+                <span class="list">Einstellungen</span>
+            </a>
+        </li>
     </ul>
 </div>
-<ul id="menubreit">
-    <li class="umhomeimage" style="border-right: 3px solid #333; height:100%; vertical-align: middle;"><a
-            class="homeimage" style="height: 100%;" href="/index.html"><img style="padding: 0; height:100%;"
-                src="/Fotos/logo.png" id="CoinAppIcon"></a>
-    </li>
-    <li class="paddingwith"><a href="/index.html">Home</a></li>
-    <!--<li class="paddingwith"><a href="/html/news">News</a></li>-->
-    <!--<li class="paddingwith"><a href="/html/login">Anmelden</a></li>-->
-    <li class="paddingwith"><a href="/html/contact">Kontakt</a></li>
-    <li class="paddingwith"><a href="/html/faq">FAQ</a></li>
-    <!--<li class="paddingwith"><a href="/html/register">Registrieren</a></li>-->
-    <li class="paddingwith"><a href="#" class="newsletter-btn">Newsletter Anmeldung</a></li>
-    <li class="paddingwith"><a href="/html/mitmachen">Mitmachen</a></li>
-    <li class="paddingwith"><a href="#" class="overprojekteausklappen">Projekte</a>
-        <div class="projekteausklappen" style="display: none;"><a href="/html/projekte/aaseecoin">Aaseecoin</a></div>
-    </li>
-    <!--<li class="paddingwith"><span class="change" style=" color: white;">Heller Modus</span></li>
-        DAS FUNKTIONIERT IMMER NOCH NICHT!!! LASS DAS SO STEHEN, BIS ES FUNKTIONIERT!!!
-    -->
-    <li class="paddingwith" style="float:right"> <a href="/html/ueberuns">Über Uns</a></li>
-    <li class="paddingwith" style="float:right"> <a href="/html/impressum">Impressum</a></li>
-</ul>
-<script>
-    $(".overprojekteausklappen").click(function () {
-        if ($(this).parent("li").children(".projekteausklappen").css("display") == "flex") {
-            $(this).parent("li").children(".projekteausklappen").css("display", "none");
-        } else {
-            $(this).parent("li").children(".projekteausklappen").css("display", "flex");
-        }
-    });
-</script>
 
-<footer style="z-index: 20!important;">
-    <a href="https://www.instagram.com/cityoftomorrow_ms/" style="text-decoration: none;">Instagram <img src="/Fotos/InstagramIcon.png" alt="Icon-Beschreibung" id="ICON"></a>
-</footer>
+<!--insel start-->
+<div class="island">
+    <div class="user-info">
+        <div class="login-name">Guest</div>
+        <div class="aASEEcoin-wallet">N/A</div>
+    </div>
+</div>
+<!--insel end-->
 
+<!--links start-->
 
-<style>
-
-</style>
+<!--insel end-->
