@@ -1,3 +1,6 @@
+.homeimage {
+  background-color: #333!important;
+}
 .projekteausklappen {
   height: auto;
   width: 200px;
@@ -110,10 +113,12 @@ li a {
 
 .active.umhomeimage {
   padding: 0;
+  background-color: #333!important;
 }
 
 .active.homeimage {
   padding: 20px 16px;
+  background-color: #333!important;
 }
 
 #CoinAppIcon {
