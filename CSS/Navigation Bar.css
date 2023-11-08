@@ -185,6 +185,9 @@ li a {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   text-align: center;
   padding: 10px;
   background-color: #04AA6D;
@@ -205,6 +208,6 @@ footer a {
   color: black;
 }
 
-/*body {
+body {
   padding-bottom: 100px;
-}*/
+}
