@@ -75,7 +75,7 @@ var interaveltest = setInterval(() => {
             $("button[type='submit']").on("click", () => {
                 $.ajax({
                     method: "POST",
-                    url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/newsletter",
+                    url: "https://lonn90.uber.space/aaseecoinbackend/newsletter",
                     contentType: 'application/json',
                     dataType: 'json',
                     data: JSON.stringify({
@@ -93,7 +93,7 @@ var interaveltest = setInterval(() => {
             $("#contact-submit").on("click", () => {
                 $.ajax({
                     method: "POST",
-                    url: "https://uberspace.lonnie-schemann.de/aaseecoinbackend/kontakt",
+                    url: "https://lonn90.uber.space/aaseecoinbackend/kontakt",
                     contentType: 'application/json',
                     dataType: 'json',
                     data: JSON.stringify({
