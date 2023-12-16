@@ -11,22 +11,26 @@
 </head>
 
 <body>
+
     <div id="loginfield" style="display: flex;">
         <h1>Einloggen</h1>
         <input type="text" id="email" placeholder="E-Mail">
         <input type="password" id="password" placeholder="Passwort">
         <button id="loginbutton">Einloggen</button>
     </div>
+
     <div id="mitarbeiterbereich" style="display: none;">
         <div class="anzeigeinmitarbeiterbereich" style="margin-right: 100px; background-color: #333">
             <h1>Abmelden</h1>
             <button onclick="abmelden()">Abmelden</button>
         </div>
+
         <div class="anzeigeinmitarbeiterbereich" style="background-color: #04AA6D;">
             <h1>Newsletter</h1>
             <span>Aktuelle Anmeldungen: <span id="aktuelleAnmeldungenNewsletterzahl"></span></span><br>
             <button class="forPopUp" action="sendNewsletter">Newsletter versenden</button>
         </div>
+
         <div id="anzeigepopupinmitarbeiterbereich" style="display: none;">
             <div style="display: none;" class="popupinanzeigepopupinmitarbeiterbereich" foraction="sendNewsletter">
                 <img src="/Fotos/Kreuz.png" id="Kreuzpopupschließen" onclick="closePopup()">
@@ -34,10 +38,13 @@
                 <button id="buttonemailversenden" onclick="sendnewsletterbtnfunction">Senden</button>
             </div>
         </div>
+    <a href="">
         <div style="display: flex; background-color: #333; margin-left: 100px;" class="anzeigeinmitarbeiterbereich">
             <h1>Admin</h1>
             <button id="adminbutton">Admin</button>
         </div>
+    </a>    
+
         <script>
             function abmelden() {
                 $.removeCookie('token');
@@ -122,7 +129,10 @@
                 })
             });
         </script>
+
+
         <style>
+
             #emailtextnewsletter {
                 width: 90%;
                 height: 200px;
